@@ -3,7 +3,7 @@ import { useState } from "react";
 import style from "./Trends.module.css";
 
 import Dialog2 from "../../Dialog2/Dialog2";
-import CustomButton from "../../../Atom/Button/CustomButton"
+// import CustomButton from "../../../Atom/Button/CustomButton"
 
 const Trends = () => {
   const [isNotIntrested, setIsNotIntrested] = useState([
@@ -85,15 +85,7 @@ const Trends = () => {
             </div>
           );
         })}
-        <div className={style.btn2}> 
-           <CustomButton
-           className={style.btn2}
-        buttonText={"see more"}
-        btnNext={()=>
-        alert("see more things")
-        }
-            />
-        </div>
+        
       </div>
     
     </div>

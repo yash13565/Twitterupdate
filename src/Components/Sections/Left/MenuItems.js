@@ -75,7 +75,6 @@ function LeftSec() {
               <Dialog
                 open={isOpen}
                 onClose={handleClose}
-                // bodyStyle={{ margin: 0, padding: 0 }}
                 style={{
                   background: "rgba(91, 112, 131, 0.4)",
                   fontSize: "15px",
@@ -91,7 +90,7 @@ function LeftSec() {
               picture={
                 <Avatar
                   alt="Remy Sharp"
-                  src="https://tinypng.com/images/social/website.jpg"
+                  src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 />
               }
               text={Data.Name}
