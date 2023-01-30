@@ -6,7 +6,6 @@ import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 import {tweetPosts} from "../../ConstData/ConstData";
-import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { isTweetPost } from "../../Recoil/Atom1/Atom";
 
