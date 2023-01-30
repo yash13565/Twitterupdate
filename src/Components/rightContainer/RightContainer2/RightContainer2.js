@@ -5,16 +5,10 @@ import CustomButton from "../../../Atom/Button/CustomButton";
 import VerifiedIcon from '@mui/icons-material/Verified';
 
 function Righthomebox2() {
-  const handleClick = (id) => {
-    const updatedFollowContainer = followContainer.map((item) => {
-      if (item.id === id) {
-        item.followed = !item.followed;
-      }
-      return item;
-    });
-    setFollowContainer(updatedFollowContainer);
-  };
+  const [ show , setShow]= useState(false)
+ 
   const [followContainer, setFollowContainer] = useState([
+    
     {
       id: 1,
       tag: <i className="far fa-solid fa-badge-check"></i>,
@@ -44,11 +38,34 @@ function Righthomebox2() {
       text2: "akshay@gmail.com",
     },
   ]);
+  const [trending , setTrendings] = useState(followContainer.slice(0,2))
+  const [isShowingAllTrendings , setIsShowingAllTrendings] = useState(false)
+
+  const handleClick = (id) => {
+    const updatedFollowContainer = followContainer.map((item) => {
+      if (item.id === id) {
+        item.followed = !item.followed;
+      }
+      return item;
+    });
+    setFollowContainer(updatedFollowContainer);
+  };
+
+ 
+
+  // handle seeAll request
+  function handleRequestSeeAll () {
+      setIsShowingAllTrendings(!isShowingAllTrendings)
+      if(isShowingAllTrendings) {
+         return setTrendings(followContainer.slice(0,2))
+      }
+      setTrendings(followContainer)
+  }
   return (
     <div className={style.container}>
       <h1>Who to follow</h1>
       <div className={style.main}>
-        {followContainer.map((menu) => {
+        {trending.map((menu) => {
           return (
             <div className={style.wrapper}>
               <Avatar alt="Remy Sharp" src={menu.src} />
@@ -71,13 +88,13 @@ function Righthomebox2() {
             </div>
           );
         })}
-        {/* <div className={style.btn2}>
+        <div className={style.btn2}>
           <CustomButton
-            className={style.btn2}
-            buttonText={"see more"}
-            btnNext={() => alert("see more things")}
+            customCss={style.btn2}
+            buttonText=   {isShowingAllTrendings ? 'Show Less' : 'Show More'}
+            btnNext={handleRequestSeeAll}
           />
-        </div> */}
+        </div>
       </div>
     </div>
   );

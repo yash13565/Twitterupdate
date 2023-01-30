@@ -45,6 +45,11 @@
     outline: none;
     align-items: center;
     text-align: center;
-  
-
+}
+.btn2{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: rgb(29, 155, 240);
+    cursor: pointer;
 }
