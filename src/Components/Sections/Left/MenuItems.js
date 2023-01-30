@@ -53,7 +53,7 @@ function LeftSec() {
           <div className={style.innerContainer2}>
             <div className={style.logo}>
              
-              <p onClick={()=> nevigate("/") }> <FaTwitter /></p>
+              <p  onClick={()=> nevigate("/") }> <FaTwitter style={{cursor:'pointer'}}/></p>
             </div>
 
             {menu.map((menu,index) => {

@@ -45,6 +45,8 @@
     outline: none;
     align-items: center;
     text-align: center;
+    cursor: pointer;
+    font-weight: bold;
 }
 .btn2{
     background: none;

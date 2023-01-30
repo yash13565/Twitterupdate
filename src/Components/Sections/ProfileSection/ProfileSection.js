@@ -16,7 +16,7 @@ function ProfileSection() {
     <>
     <div className={style.wrapper}>
       <div className={style.feed__header}>
-        <p onClick={()=> nevigate("/") }><WestIcon /></p>
+        <p onClick={()=> nevigate("/") }><WestIcon style={{cursor:'pointer'}}/></p>
         <h2>{Data.Name}</h2>
       </div>
         <img className={style.container} src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" />
