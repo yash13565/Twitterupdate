@@ -56,10 +56,10 @@ function LeftSec() {
               <p onClick={()=> nevigate("/") }> <FaTwitter /></p>
             </div>
 
-            {menu.map((menu) => {
+            {menu.map((menu,index) => {
               return (
-                <div className={style.sidebar}>
-                  <div className={style.sidebarOption} key={menu.id}>
+                <div className={style.sidebar} key={index}>
+                  <div className={style.sidebarOption} >
                     <h2>{menu.icon}</h2>
                     <span>{menu.Name}</span>
                   </div>
@@ -93,8 +93,8 @@ function LeftSec() {
                   src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 />
               }
-              text={Data.Name}
-              text2={Data.Email}
+              text={Data?.Name}
+              text2={Data?.Email}
               button={handleOpen}
               customCss={style.button2}
             />
