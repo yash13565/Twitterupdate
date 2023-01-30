@@ -17,7 +17,8 @@
 }
 .main {
   background-color: #000000;
-  height: 6rem;
+  height:max-content;
+
 
   
 }
@@ -41,7 +42,7 @@ textarea {
   border: none;
   outline: none;
   width: 100%;
-  height: 100%;
+  height: 6rem;
   padding: 0.75rem 1.25rem;
   margin: 0.5rem 0;
   font-size: 1rem;
@@ -99,8 +100,18 @@ text-align: center;
   display: inline-flex;
   
 }
+.iconscontainer{
+  z-index: 3;
+  display: flex;
+  gap: 1.5rem;
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+  cursor: pointer;
+}
 
-.icons li {
+.icons {
+  z-index: 3;
   list-style: none;
   color: #1da1f2;
   font-size: 1.25rem;
@@ -114,13 +125,12 @@ text-align: center;
   border-radius: 50%;
   transition: background 0.2s ease;
 }
-/* .backdrop-blur::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: blur(5px);
-  z-index: -1;
-} */
+
+.imageWrapper{
+  max-height: 20rem;
+  overflow: auto;
+  display: inline-block;
+}
+.imageWrapper::-webkit-scrollbar{
+  display: none;
+}
