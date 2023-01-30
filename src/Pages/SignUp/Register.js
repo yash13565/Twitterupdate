@@ -150,7 +150,6 @@ function Register() {
       setIncl(incl + 1);
       alert("USER Sucessfully Registered");
       setLoginStatus(true);
-      // window.location.assign("/");
       navigate("/");
     }
   }
@@ -203,6 +202,7 @@ function Register() {
                       <Input
                         className={style.input2}
                         placeholder="Password"
+                        type='password'
                         handleOnchange={handlePassword}
                       />
                       <span style={{ color: "red" }}>{passwordError}</span>
