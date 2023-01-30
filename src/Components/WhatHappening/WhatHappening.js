@@ -39,9 +39,6 @@ function WhatHappening() {
       handlerName : '@Profile Handler' ,
       organization : 'United States government organization',
       tweetText : storeArray,
-     
-     
-  
       tweetCount : 100,
       retweetCount : 100 ,
       likesCount : 100,
@@ -58,8 +55,6 @@ function WhatHappening() {
     setLoginStatus(loginStatus+1);
     
   }
-  
-
   return (
     <>
       <div className={style.parentContainer}>

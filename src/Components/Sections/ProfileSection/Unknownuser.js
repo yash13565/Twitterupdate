@@ -55,15 +55,7 @@ function ProfileSection() {
               ? tweets.map((x) => {
         return (
           <>
-           {/* tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
-                tweetPic : 'https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080',
-                tweetCount : 100,
-                retweetCount : 100 ,
-                likesCount : 100,
-                viewsCount : '102k', */}
             <div key={x.id}>
-     
-
             <div className={style2.wrapper}>
             <div className={style2.container1}>
               <div >

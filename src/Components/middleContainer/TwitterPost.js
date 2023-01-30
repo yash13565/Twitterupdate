@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 export default function TwitterPost() {
   const[post,setPost]=useState(tweetPosts)
   const nevigate = useNavigate();
-  const [likesCount, setLikesCount] = useState(0);
+  const [likesCount, setLikesCount] = useState(1000);
   const[newPost,setNewPost] = useRecoilState(isTweetPost);
   const[newProfile,setNewProfile] = useRecoilState(userProfile);
  useEffect(() => {
@@ -29,13 +29,8 @@ function  fetchData()
     setPost(tweetPosts)
   }
  
-  function  fetchData()
-  {
-    setPost(tweetPosts)
-  }
-
   function handleLike() {
-    setLikesCount(likesCount + 1);
+    setLikesCount(1001);
   }  
  function xyz (dataName)  {
     setNewProfile(dataName)
@@ -97,8 +92,8 @@ function  fetchData()
                     <SyncIcon />
                   </span>
                   <span>
-                    {data.likesCount}{likesCount}
-                    <FavoriteBorderIcon />
+                    {likesCount}
+                  <button style={{border:'none',background:'none',color:' rgb(102, 102, 192)'}} onClick={handleLike}><FavoriteBorderIcon /></button>
                   </span>
                   <span>
                     {data.viewsCount}
