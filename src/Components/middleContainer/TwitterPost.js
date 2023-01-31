@@ -51,8 +51,6 @@ function  fetchData()
                 viewsCount : data.viewsCount,
                 followers : data.followers,
                 followings : data.followings,
-              
-                
                 
               } )) } >
               
