@@ -6,18 +6,18 @@ import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { tweetPosts } from "../../ConstData/ConstData";
-import { useEffect } from "react";
+
 import { useRecoilState } from "recoil";
 import { isTweetPost } from "../../Recoil/Atom1/Atom";
 
 function WhatHappening() {
-  // const [isOpen, setIsOpen] = useState(false);
+  let Data = JSON.parse(localStorage.getItem("user0"));
+ 
   const [image, setImage] = useState("");
   const [storeArray, setStoreArray] = useState("");
-  // const[forTrue,setForTrue]=useState(0)
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const inputRef = useRef(null);
-
+  
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
     { id: 1, icon: <FaImage />, action: "pickImage" },
@@ -48,8 +48,8 @@ function WhatHappening() {
   }
   function handleNewTweet() {
     let newObj = {
-      name: "Profile Name",
-      handlerName: "@Profile Handler",
+      name: Data.Name,
+      handlerName: Data.Email,
       organization: "United States government organization",
       tweetText: storeArray,
       tweetPic: image,

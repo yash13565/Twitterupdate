@@ -6,7 +6,7 @@ const LikeComponant = () => {
   const [likeCount, setLikeCount] = useState(123);
   const [color, setColor] = useState("purple");
   const [activeBtn, setActiveBtn] = useState("none");
-  const [dislikeCount, setDislikeCount] = useState();
+  
 
 
   const handleLikeClick = () => {
@@ -37,25 +37,15 @@ const LikeComponant = () => {
       }
       return;
     }
- 
-    // if (activeBtn === "dislike") {
-    //   setLikeCount(likeCount + 1);
-    //   setDislikeCount(dislikeCount - 1);
-    //   setActiveBtn("like");
-    // }
   };
 
   return (
     <>
     
       <div >
-        
-       
-
        <button
        id={style.likebtn}
        style={{color}}
-      className={`btn ${activeBtn === "likebtn" ? "like-active" : ""}`}
       onClick={handleLikeClick}
     >
         < FavoriteBorderIcon />

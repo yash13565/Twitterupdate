@@ -12,9 +12,9 @@ import { isTweetPost } from "../../Recoil/Atom1/Atom";
 import { Avatar } from "antd";
 
 function Tweet() {
+  let Data = JSON.parse(localStorage.getItem("user0"));
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [forTrue, setForTrue] = useState(0);
   const [storeArray, setStoreArray] = useState("");
@@ -49,8 +49,8 @@ function Tweet() {
     setIsOpen(true);
 
     let newObj = {
-      name: "Profile Name",
-      handlerName: "@Profile Handler",
+      name: Data.Name,
+      handlerName: Data.Email,
       organization: "United States government organization",
       tweetText: storeArray,
       tweetPic: image,

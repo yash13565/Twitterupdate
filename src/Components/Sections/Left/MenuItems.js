@@ -15,7 +15,7 @@ import { VscBellDot } from "react-icons/vsc";
 import { Avatar } from "@mui/material";
 import CustomButton2 from "../../../Atom/Button/CustomButton2";
 import DialogBox from "../../Dialog/DialogBox";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function LeftSec() {
@@ -88,10 +88,10 @@ function LeftSec() {
           <div>
             <CustomButton2
               picture={
-                <Avatar
+               <Link to='/profile'> <Avatar
                   alt="Remy Sharp"
                   src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                />
+                /></Link>
               }
               text={Data?.Name}
               text2={Data?.Email}
