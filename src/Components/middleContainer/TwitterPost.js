@@ -4,7 +4,6 @@ import { Avatar } from "@mui/material";
 import { tweetPosts } from "../../ConstData/ConstData";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SyncIcon from "@mui/icons-material/Sync";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from '@mui/icons-material/Verified';
@@ -12,11 +11,11 @@ import { useState,useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { isTweetPost ,userProfile} from "../../Recoil/Atom1/Atom";
 import { useNavigate } from "react-router-dom";
+import LikeComponant from "../LikeCompanent/LikeCompanent";
 
 export default function TwitterPost() {
   const[post,setPost]=useState(tweetPosts)
   const nevigate = useNavigate();
-  const [likesCount, setLikesCount] = useState(1000);
   const[newPost,setNewPost] = useRecoilState(isTweetPost);
   const[newProfile,setNewProfile] = useRecoilState(userProfile);
  useEffect(() => {
@@ -27,11 +26,7 @@ export default function TwitterPost() {
 function  fetchData()
   {
     setPost(tweetPosts)
-  }
- 
-  function handleLike() {
-    setLikesCount(1001);
-  }  
+  } 
  function xyz (dataName)  {
     setNewProfile(dataName)
     nevigate("/Profile2")
@@ -92,8 +87,7 @@ function  fetchData()
                     <SyncIcon />
                   </span>
                   <span>
-                    {likesCount}
-                  <button style={{border:'none',background:'none',color:' rgb(102, 102, 192)'}} onClick={handleLike}><FavoriteBorderIcon /></button>
+                   <LikeComponant/>
                   </span>
                   <span>
                     {data.viewsCount}

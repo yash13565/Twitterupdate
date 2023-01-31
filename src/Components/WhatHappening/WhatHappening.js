@@ -42,7 +42,7 @@ function WhatHappening() {
     let reader = new FileReader();
     reader.onload = (e) => {
       setImage(e.target.result);
-      inputRef.current = null;
+  
     };
     reader.readAsDataURL(e.target.files[0]);
   }
@@ -67,6 +67,7 @@ function WhatHappening() {
     // setForTrue(forTrue+1)
     setLoginStatus(loginStatus + 1);
     setImage("");
+    inputRef.current.value=''
   }
 
   return (
