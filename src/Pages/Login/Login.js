@@ -6,12 +6,10 @@ import Input from "../../Atom/Input/Input";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { isLoginAtom } from "../../Recoil/Atom1/Atom";
-
 import { Link } from "react-router-dom";
 import { isValidLogin } from "../../helper";
 function Login() {
   const [nextbtn, setNextBtn] = useState(false);
- 
   const nevigate = useNavigate();
   const [loginv, setLoginV] = useState("");
   const [passWordValue, setPasswordValue] = useState("");

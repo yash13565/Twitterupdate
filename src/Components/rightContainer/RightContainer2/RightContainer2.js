@@ -62,12 +62,12 @@ function Righthomebox2() {
       setTrendings(followContainer)
   }
   return (
-    <div className={style.container}>
+    <div className={style.container} >
       <h1>Who to follow</h1>
       <div className={style.main}>
-        {trending.map((menu) => {
+        {trending.map((menu,index) => {
           return (
-            <div className={style.wrapper}>
+            <div className={style.wrapper} key={index}>
               <Avatar alt="Remy Sharp" src={menu.src} />
               <div className={style.img}>
                 <h3>

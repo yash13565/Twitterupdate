@@ -6,16 +6,14 @@ import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { tweetPosts } from "../../ConstData/ConstData";
-
 import { useRecoilState } from "recoil";
-import { isTweetPost } from "../../Recoil/Atom1/Atom";
-
+import { isTweetPost,myTweet } from "../../Recoil/Atom1/Atom";
 function WhatHappening() {
   let Data = JSON.parse(localStorage.getItem("user0"));
- 
   const [image, setImage] = useState("");
   const [storeArray, setStoreArray] = useState("");
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
+  const [showMyTweet, setShowMyTweet] = useRecoilState(myTweet);
   const inputRef = useRef(null);
   
   const Icons = [
@@ -29,6 +27,7 @@ function WhatHappening() {
 
   function takeTweet(e) {
     setStoreArray(e.target.value);
+    
   }
   // function to triiger picking image imput
   function handleOnClickIcon(action) {
@@ -68,6 +67,7 @@ function WhatHappening() {
     setLoginStatus(loginStatus + 1);
     setImage("");
     inputRef.current.value=''
+    setShowMyTweet([newObj,...showMyTweet])
   }
 
   return (
@@ -113,7 +113,7 @@ function WhatHappening() {
           <CustomButton
             buttonText="Tweet"
             btnNext={handleNewTweet}
-            customCss={style.button}
+            customCss={style.button} 
           />
         </div>
         {/* hidden input */}

@@ -42,12 +42,12 @@ function ProfileSection() {
         </span>
       </div>
      <div className={style.textcontaint}>
-        <h4>{`${"Name:-"}${unknownProfileData.name}`}</h4>
-        <h5>{`${"@"}${unknownProfileData.handlerName}`}</h5>
-        <h5>{`${"tweetCount:-"}${unknownProfileData.tweetCount}`}</h5>
-        <h5>{`${"likescount:-"}${unknownProfileData.likesCount}`}</h5>
-        <h5>{`${"followers:-"}${unknownProfileData.followers}`}</h5>
-         <h5>{`${"followings:-"}${unknownProfileData.followings}`}</h5>
+        <h4>{`"Name:-"${unknownProfileData.name}`}</h4>
+        <h5>{`${unknownProfileData.handlerName}`}</h5>
+        <h5>{`"tweetCount:-"${unknownProfileData.tweetCount}`}</h5>
+        <h5>{`"likescount:-"${unknownProfileData.likesCount}`}</h5>
+        <h5>{`"followers:-"${unknownProfileData.followers}`}</h5>
+         <h5>{`"followings:-"${unknownProfileData.followings}`}</h5>
   </div>
     </div>
  <div>

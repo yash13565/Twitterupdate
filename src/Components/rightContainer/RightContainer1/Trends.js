@@ -50,7 +50,7 @@ const Trends = () => {
 
   const HandleClick = () => {
     const tempArr = [];
-    isNotIntrested.forEach((el) => {
+    isNotIntrested.filter((el) => {
       if (el.id !== selectedId) {
         tempArr.push(el);
       }
@@ -72,9 +72,10 @@ const Trends = () => {
         <div className={style.keyword__heading}>
           <h4 className={style.heading4}>What's happening</h4>
         </div>
-        {trending.map((keyword) => {
+        {trending.map((keyword,index) => {
           return (
             <div
+            key={index}
               className={style.container}
               onClick={() => {
                 updateId(keyword.id);
@@ -98,7 +99,7 @@ const Trends = () => {
         <div>
           <CustomButton
             customCss={style.btn2}
-            buttonText= {isShowingAllTrendings ? 'Show Less' : 'Show More'} 
+            buttonText= {isShowingAllTrendings? 'Show Less' : 'Show More'} 
             btnNext={handleRequestSeeAll}
           />
         </div>

@@ -3,7 +3,7 @@ import { atom } from "recoil";
 
 export const isLoginAtom = atom({
   key: "isLogin",
-  default: false,
+  default: true,
 });
 
 
@@ -17,3 +17,8 @@ export const userProfile = atom({
   key: "userProfile",
   default: {},
 });
+
+export const myTweet=atom({
+  key:'myTweet',
+  default:[],
+})

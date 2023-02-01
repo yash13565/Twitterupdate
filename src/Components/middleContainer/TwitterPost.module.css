@@ -3,7 +3,7 @@
   display: flex;
   justify-content:flex-start;
   flex-direction: column;
-  border: 1px blueviolet solid;
+  border: 1px solid white;
   gap: 1rem;
  padding: 2rem;
 }

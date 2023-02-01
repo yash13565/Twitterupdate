@@ -16,6 +16,7 @@ import { Avatar } from "@mui/material";
 import CustomButton2 from "../../../Atom/Button/CustomButton2";
 import DialogBox from "../../Dialog/DialogBox";
 import { Link, useNavigate } from "react-router-dom";
+import {myTweet } from "../../../Recoil/Atom1/Atom";
 
 
 function LeftSec() {

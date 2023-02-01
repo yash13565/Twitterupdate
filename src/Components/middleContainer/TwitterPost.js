@@ -34,9 +34,9 @@ function  fetchData()
 
   return (
     <>
-      {post.map((data) => {
+      {post.map((data,index) => {
         return (
-          <div className={style.wrapper}>
+          <div key={index} className={style.wrapper}>
             <div className={style.container1}>
               <div  onClick={ ()=>xyz(({
                 name  : data.name,

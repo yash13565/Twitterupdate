@@ -23,8 +23,6 @@ function Register() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const [data, setData] = useState([]);
   const [incl, setIncl] = useState(0);
   const [month, setMonth] = useState("");
   const [day, setDay] = useState("");
@@ -81,9 +79,8 @@ function Register() {
     let flag = 0;
     if (!isValidString(name)) {
       setNameError("please fill correct name input");
-      //  flag = 0;
     } else {
-      // flag = 1;
+
       setNameError("");
     }
 
