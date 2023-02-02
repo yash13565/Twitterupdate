@@ -6,7 +6,10 @@ export const tweetPosts = [
         organization : 'United States government organization',
         tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
         tweetPic : 'https://cdn.britannica.com/19/77419-050-7785C04B/White-House-portico-Pennsylvania-Avenue.jpg',
-      
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         tweetCount : 100,
         retweetCount : 100 ,
         likesCount : 100,
@@ -22,6 +25,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -31,6 +38,11 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
+                        
                     },
                     {
                         name : 'Baburao',
@@ -40,6 +52,11 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
+                        
                     },
                     {
                         name : 'Raju',
@@ -49,6 +66,11 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
+                        
                     },
                     {
                         name : 'Baburao',
@@ -58,6 +80,11 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
+                        
                     },
                 ]
             },
@@ -69,6 +96,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -78,6 +109,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -87,6 +122,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -96,6 +135,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -105,6 +148,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
 
                 ]
@@ -126,6 +173,10 @@ export const tweetPosts = [
         followers : 200,
         followings : 400,
         joinedDate : '22 dec 2022',
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         tweets : [
             {
                 tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
@@ -134,6 +185,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -143,6 +198,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -152,6 +211,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -161,6 +224,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -170,6 +237,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                 ]
             },
@@ -180,6 +251,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -189,6 +264,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -198,6 +277,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -207,6 +290,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -216,6 +303,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                 ]
             }
@@ -231,6 +322,10 @@ export const tweetPosts = [
         tweetCount : 700,
         retweetCount : 700 ,
         likesCount : 900,
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         viewsCount : '100k',
         refLink : 'https://www.globalwildlife.org/blog/',
         followers : 200,
@@ -244,6 +339,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -253,6 +352,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -262,6 +365,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -271,6 +378,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -280,6 +391,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
 
                 ]
@@ -291,6 +406,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'ram',
@@ -300,6 +419,10 @@ export const tweetPosts = [
                         retweetCount : 100 ,
                         likesCount : 100,
                         viewsCount : '102k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'sham',
@@ -309,6 +432,10 @@ export const tweetPosts = [
                         retweetCount : 100 ,
                         likesCount : 100,
                         viewsCount : '102k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'ram',
@@ -318,6 +445,10 @@ export const tweetPosts = [
                         retweetCount : 100 ,
                         likesCount : 100,
                         viewsCount : '102k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'sham',
@@ -327,6 +458,10 @@ export const tweetPosts = [
                         retweetCount : 100 ,
                         likesCount : 100,
                         viewsCount : '102k',
+                         tweetComment: [],
+                         isOpen: false,
+                         inrDcr: false,
+                         color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -336,6 +471,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -345,6 +484,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -354,6 +497,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -363,6 +510,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                 ]
             }
@@ -375,7 +526,10 @@ export const tweetPosts = [
         organization : '',
         tweetText : 'Stolen.. Not earned. ',
         tweetPic : 'https://pbs.twimg.com/profile_images/378800000790387702/e24150ded8f848ca487c5b22ae396dbd_400x400.jpeg',
-       
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         tweetCount : 400,
         retweetCount : 327 ,
         likesCount : 90,
@@ -392,6 +546,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                 tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -401,6 +559,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                         tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -410,6 +572,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                         tweetComment: [],
+                         isOpen: false,
+                         inrDcr: false,
+                         color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -419,6 +585,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                         tweetComment: [],
+                         isOpen: false,
+                         inrDcr: false,
+                         color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -428,6 +598,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                         tweetComment: [],
+                 isOpen: false,
+                 inrDcr: false,
+                 color: "rgb(60, 60, 60)",
                     },
 
                 ]
@@ -439,6 +613,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                 tweetComment: [],
+                 isOpen: false,
+                 inrDcr: false,
+                 color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -448,6 +626,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -457,6 +639,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -466,6 +652,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -475,6 +665,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                 ]
             }
@@ -487,6 +681,8 @@ export const tweetPosts = [
         organization : '',
         tweetText : 'Well Played Team India ',
         tweetPic : 'https://pbs.twimg.com/media/FnLAWPyaMAEsuY3?format=jpg&name=large',
+        tweetComment:[],
+        inrDcr:false,
         tweetCount : 650,
         retweetCount : 699 ,
         likesCount : 900,
@@ -495,6 +691,10 @@ export const tweetPosts = [
         followers : 200,
         followings : 400,
         joinedDate : '22 dec 2022',
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         tweets : [
             {
                 tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
@@ -503,6 +703,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -512,6 +716,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -521,6 +729,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -530,6 +742,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -539,6 +755,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
 
                 ]
@@ -550,6 +770,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -559,6 +783,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -568,6 +796,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -577,6 +809,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -586,6 +822,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
 
                 ]
@@ -606,10 +846,16 @@ export const tweetPosts = [
         tweetCount : 650,
         retweetCount : 699 ,
         likesCount : 900,
+        tweetComment:[],
+        inrDcr:false,
         viewsCount : '17k',
         followers : 200,
         followings : 400,
         joinedDate : '22 dec 2022',
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         tweets : [
             {
                 tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
@@ -618,6 +864,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'Raju',
@@ -627,6 +877,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -636,6 +890,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Raju',
@@ -645,6 +903,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 120,
                         viewsCount : '109k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'Baburao',
@@ -654,6 +916,10 @@ export const tweetPosts = [
                         retweetCount : 130 ,
                         likesCount : 180,
                         viewsCount : '162k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                 ]
             },
@@ -664,6 +930,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : 'ram',
@@ -673,6 +943,10 @@ export const tweetPosts = [
                         retweetCount : 100 ,
                         likesCount : 100,
                         viewsCount : '102k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'sham',
@@ -682,6 +956,10 @@ export const tweetPosts = [
                         retweetCount : 100 ,
                         likesCount : 100,
                         viewsCount : '102k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'ram',
@@ -691,6 +969,10 @@ export const tweetPosts = [
                         retweetCount : 100 ,
                         likesCount : 100,
                         viewsCount : '102k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
                     {
                         name : 'sham',
@@ -700,6 +982,10 @@ export const tweetPosts = [
                         retweetCount : 100 ,
                         likesCount : 100,
                         viewsCount : '102k',
+                        tweetComment: [],
+                        isOpen: false,
+                        inrDcr: false,
+                        color: "rgb(60, 60, 60)",
                     },
 
                 ]
@@ -717,6 +1003,10 @@ export const tweetPosts = [
         tweetCount : 100,
         retweetCount : 509 ,
         likesCount : 450,
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         viewsCount : '79k',
         hastags : ['#Freedom Fighter','#India'],
         followers : 200,
@@ -730,6 +1020,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',
@@ -751,6 +1045,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',
@@ -778,6 +1076,10 @@ export const tweetPosts = [
         tweetCount : 100,
         retweetCount : 509 ,
         likesCount : 450,
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         viewsCount : '79k',
         refLink : 'https://twitter.com/AshwiniVaishnaw',
         hastags: ['#Electronics','#iphone'],
@@ -792,6 +1094,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',
@@ -813,6 +1119,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',
@@ -840,6 +1150,10 @@ export const tweetPosts = [
         tweetCount : 10,
         retweetCount : 50 ,
         likesCount : 40,
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         viewsCount : '9k',
         hastags : ['#bcm112','#students','#education','#allGovernmets'] ,
         refLink : 'https://twitter.com/ippittipapitti',
@@ -854,6 +1168,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',
@@ -875,6 +1193,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',
@@ -901,6 +1223,10 @@ export const tweetPosts = [
         tweetCount : 10,
         retweetCount : 50 ,
         likesCount : 40,
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         viewsCount : '9k',
         hastags : ['#Education','#Rajasthan'],
         refLink : 'https://dainik-b.in/ekPIEaD5Jwb',
@@ -915,6 +1241,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',
@@ -936,6 +1266,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',
@@ -961,6 +1295,10 @@ export const tweetPosts = [
         tweetPic : 'https://www.tourmyindia.com/states/madhyapradesh/image/mp-tourism.webp',
         retweetCount : 50 ,
         likesCount : 40,
+        tweetComment: [],
+        isOpen: false,
+        inrDcr: false,
+        color: "rgb(60, 60, 60)",
         viewsCount : '9k',
         hastags : ['#BIGcat','#HeartofIndia'],
         refLink : 'https://www.mptigerfoundation.org/news-corner/blog' ,
@@ -996,6 +1334,10 @@ export const tweetPosts = [
                 retweetCount : 100 ,
                 likesCount : 100,
                 viewsCount : '102k',
+                tweetComment: [],
+                isOpen: false,
+                inrDcr: false,
+                color: "rgb(60, 60, 60)",
                 TweetReplies : [
                     {
                         name : '',

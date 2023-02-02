@@ -1,76 +1,75 @@
-import React from 'react'
-import style2 from "./UserTweet.module.css"
+import React from "react";
 import { Avatar } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SyncIcon from "@mui/icons-material/Sync";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
-import VerifiedIcon from '@mui/icons-material/Verified';
-import {myTweet} from "../../../../Recoil/Atom1/Atom"
-import { useRecoilState } from 'recoil'
+import VerifiedIcon from "@mui/icons-material/Verified";
+import { Personaltweet } from "../../../../Recoil/Atom1/Atom";
+import { useRecoilValue } from "recoil";
+import style2 from './UserTweet.module.css'
 function UserTweet() {
-    const [data,setData]= useRecoilState(myTweet)
-    
-    console.log(data);
+  const Data = useRecoilValue(Personaltweet);
+  console.log(Data);
+
   return (
     <>
-    {data.map((x)=>{
-        return(
-            <div className={style2.wrapper}>
+      {Data.map((x) => {
+        return (
+          <div className={style2.wrapper}>
             <div className={style2.container1}>
-                      <div >
-                      
-                        <Avatar   className={style2.avatar} src={x.tweetPic} />
-                       
-                      </div>
-        
-                      <div className={style2.innercontainer}>
-                        <span className={style2.text}>
-                          <h3>{x.name}<VerifiedIcon style={{color:"blue"}}/></h3>
-                        </span>
-                        <p>{x.tweetText}</p>
-                      </div>
-                    </div>
-        
-                    <div className={style2.img}>
-                    {data.tweetPic?
+              <div>
+                <Avatar className={style2.avatar} src={x.tweetPic} />
+              </div>
+
+              <div className={style2.innercontainer}>
+                <span className={style2.text}>
+                  <h3>
+                    {x.name}
+                    <VerifiedIcon style={{ color: "blue" }} />
+                  </h3>
+                </span>
+                <p>{x.tweetText}</p>
+              </div>
+            </div>
+
+            <div className={style2.img}>
               <img
-                style={{ width: "30rem", height: "30rem",borderRadius:"15px" }}
-                alt="user.jpg"
+                style={{
+                  width: "30rem",
+                  height: "30rem",
+                  borderRadius: "15px",
+                }}
+                alt="picture"
                 src={x.tweetPic}
               />
-              :''
-      }
-                    </div>
-                    <div className={style2.icons}>
-                          <span>
-                            {x.tweetCount}
-                            <ChatBubbleOutlineIcon />
-                          </span>
-                          <span>
-                            {x.retweetCount}
-                            <SyncIcon />
-                          </span>
-                          <span>
-                            {x.likesCount}
-                            <FavoriteBorderIcon />
-                          </span>
-                          <span>
-                            {x.viewsCount}
-                            <PollIcon />
-                          </span>
-        
-                          <UploadIcon />
-                        </div>
-          
-            </div> 
-        )
-    })}
+            </div>
+            <div className={style2.icons}>
+              <span>
+                {x.tweetCount}
+                <ChatBubbleOutlineIcon />
+              </span>
+              <span>
+                {x.retweetCount}
+                <SyncIcon />
+              </span>
+              <span>
+                {x.likesCount}
+                <FavoriteBorderIcon />
+              </span>
+              <span>
+                {x.viewsCount}
+                <PollIcon />
+              </span>
 
+              <UploadIcon />
+            </div>
+          </div>
+        );
+      })}
     </>
-    
-  )
+  );
 }
 
-export default UserTweet
+export default UserTweet;
