@@ -4,10 +4,9 @@ import WestIcon from "@mui/icons-material/West";
 import CustomButton from "../../../Atom/Button/CustomButton";
 import { useNavigate } from "react-router-dom";
 import UserTweet from "./UserTweet/UserTweet";
+// import { useRecoilValue } from "recoil";
 function ProfileSection() {
    const nevigate = useNavigate();
-
-  
   let Data = JSON.parse(localStorage.getItem("user0"));
  
   return (

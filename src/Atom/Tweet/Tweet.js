@@ -47,7 +47,6 @@ function Tweet() {
   }
   function handleNewTweet() {
     setIsOpen(true);
-
     let newObj = {
       name: Data.Name,
       handlerName: Data.Email,

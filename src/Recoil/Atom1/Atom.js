@@ -22,3 +22,8 @@ export const myTweet=atom({
   key:'myTweet',
   default:[],
 })
+
+export const handleProfileAtom=atom({
+  key:'handleProfile',
+  default:null,
+})

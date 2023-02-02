@@ -14,7 +14,8 @@ function WhatHappening() {
   const [storeArray, setStoreArray] = useState("");
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [showMyTweet, setShowMyTweet] = useRecoilState(myTweet);
-  const inputRef = useRef(null);
+  const disabled=(!storeArray)
+    const inputRef = useRef(null);
   
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
@@ -114,6 +115,7 @@ function WhatHappening() {
             buttonText="Tweet"
             btnNext={handleNewTweet}
             customCss={style.button} 
+            disable={disabled}
           />
         </div>
         {/* hidden input */}
@@ -123,6 +125,7 @@ function WhatHappening() {
           ref={inputRef}
           onChange={handleOnSelectImage}
           name="tweetPic"
+          
         />
       </div>
     </>

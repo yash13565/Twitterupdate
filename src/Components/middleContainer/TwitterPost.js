@@ -8,16 +8,20 @@ import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from '@mui/icons-material/Verified';
 import { useState,useEffect } from "react";
-import { useRecoilState } from "recoil";
-import { isTweetPost ,userProfile} from "../../Recoil/Atom1/Atom";
+import { useRecoilState ,useSetRecoilState} from "recoil";
+import { isTweetPost ,userProfile,handleProfileAtom} from "../../Recoil/Atom1/Atom";
 import { useNavigate } from "react-router-dom";
 import LikeComponant from "../LikeCompanent/LikeCompanent";
 
-export default function TwitterPost() {
+export default function TwitterPost({userProfileInfo}) {
+  // let userData=JSON.parse(localStorage.getItem('user0'))
+  // console.log(userData,"I am User data")
   const[post,setPost]=useState(tweetPosts)
   const nevigate = useNavigate();
   const[newPost,setNewPost] = useRecoilState(isTweetPost);
   const[newProfile,setNewProfile] = useRecoilState(userProfile);
+  console.log(newProfile)
+  const setRequestedProfile=useSetRecoilState(handleProfileAtom)
  useEffect(() => {
   fetchData()
   
@@ -29,9 +33,17 @@ function  fetchData()
   } 
  function xyz (dataName)  {
     setNewProfile(dataName)
-    nevigate("/Profile2")
-  };
-
+    setRequestedProfile(userProfileInfo)
+    const paramsValue=dataName.handlerName.replace("@","")
+    nevigate(`/profile2/${paramsValue}`)
+   };
+  const {
+    name='',
+    handlerName='',
+    organization='',
+    tweets='',
+    profilepic
+  }=userProfileInfo||{}
   return (
     <>
       {post.map((data,index) => {
@@ -54,7 +66,7 @@ function  fetchData()
                 
               } )) } >
               
-                <Avatar   className={style.avatar} src={data.tweetPic} />
+                <Avatar className={style.avatar} src={data.tweetPic} />
                
               </div>
 
@@ -69,11 +81,14 @@ function  fetchData()
             </div>
 
             <div className={style.img}>
+              {data.tweetPic?
               <img
                 style={{ width: "30rem", height: "30rem",borderRadius:"15px" }}
-                alt="picture"
+                alt="user.jpg"
                 src={data.tweetPic}
               />
+              :''
+      }
             </div>
             <div className={style.icons}>
                   <span>
