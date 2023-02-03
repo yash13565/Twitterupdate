@@ -23,6 +23,8 @@ function Register() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [data, setData] = useState([]);
   const [incl, setIncl] = useState(0);
   const [month, setMonth] = useState("");
   const [day, setDay] = useState("");
@@ -79,8 +81,9 @@ function Register() {
     let flag = 0;
     if (!isValidString(name)) {
       setNameError("please fill correct name input");
+      //  flag = 0;
     } else {
-
+      // flag = 1;
       setNameError("");
     }
 
@@ -120,31 +123,45 @@ function Register() {
     } else {
       flag = 0;
     }
-    if (Data.Month == "" || Data.Date == "" || Data.Year == "") {
+    if (Data.Month === "" || Data.Date === "" || Data.Year === "") {
       flag = 0;
       setDobError("please fill correct DOB input");
     } else {
       setDobError("");
     }
 
-    if (flag == 1) {
+    if (flag === 1) {
       var flagForLs = 0;
-      for (var i = 0; i < localStorage.length; i++) {
-        let k = JSON.parse(localStorage.getItem("user" + i));
+     // for (var i = 0; i < localStorage.length; i++) 
 
-        if (k.Email === email) {
+     if(localStorage.length!==0)
+     {
+        let k = JSON.parse(localStorage.getItem("user" ));
+        k.map((element)=>{
+        if (element.Email === email) {
           flagForLs = 1;
         }
-      }
-      if (flagForLs == 1) {
+      }) }}
+      
+      if (flagForLs === 1) {
         alert("USER Email is Already Exist");
       } else {
       }
-    }
+    
 
-    if (flag == 1 && flagForLs == 0) {
-      localStorage.setItem("user" + incl, JSON.stringify(Data));
-      setIncl(incl + 1);
+    if (flag === 1 && flagForLs === 0)
+     {
+      data.push(Data)
+      setData([...data])
+
+      if(localStorage.length===0)
+      {
+         localStorage.setItem('user', JSON.stringify(data ));
+      }
+     else{
+      let oldData = JSON.parse(localStorage.getItem("user"))
+      localStorage.setItem("user" , JSON.stringify([...oldData,...data]))
+     }
       alert("USER Sucessfully Registered");
       setLoginStatus(true);
       navigate("/");
@@ -199,8 +216,8 @@ function Register() {
                       <Input
                         className={style.input2}
                         placeholder="Password"
-                        type='password'
                         handleOnchange={handlePassword}
+                        type={"password"}
                       />
                       <span style={{ color: "red" }}>{passwordError}</span>
                     </div>
@@ -253,9 +270,9 @@ function Register() {
                 />
               </div>
               <div className={style.or}>
-                <p className={style.line}>____</p>
+                <p className={style.line}>__</p>
                 OR
-                <p className={style.line}>____</p>
+                <p className={style.line}>__</p>
               </div>
               <div className={style.signupbtn}>
                 <CustomButton

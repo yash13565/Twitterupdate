@@ -141,7 +141,7 @@ export default function TwitterPost() {
                   src={data.tweetPic}
                 />
               ) : (
-                <></>
+                ''
               )}
             </div>
             <div className={style.icons}>

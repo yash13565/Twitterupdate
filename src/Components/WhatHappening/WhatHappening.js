@@ -14,6 +14,7 @@ function WhatHappening() {
   const [storeArray, setStoreArray] = useState("");
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [showMyTweet, setShowMyTweet] = useRecoilState(myTweet);
+  // const [emptyInput,setEmptyInput]=useState('')
   const disabled=(!storeArray)
     const inputRef = useRef(null);
   
@@ -28,6 +29,7 @@ function WhatHappening() {
 
   function takeTweet(e) {
     setStoreArray(e.target.value);
+    // setEmptyInput(e.target.value)
     
   }
   // function to triiger picking image imput
@@ -69,6 +71,7 @@ function WhatHappening() {
     setImage("");
     inputRef.current.value=''
     setShowMyTweet([newObj,...showMyTweet])
+    // setEmptyInput('')
   }
 
   return (
@@ -81,6 +84,7 @@ function WhatHappening() {
               rows={8}
               cols={60}
               onChange={takeTweet}
+              // value={emptyInput}
             />
             <div className={style.privacy}>
               <FaGlobe />
