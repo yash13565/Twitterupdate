@@ -1,6 +1,6 @@
 import React from "react";
 import { useRecoilValue } from "recoil";
-import { userTweet, forPassingId } from "../../../Recoil/Atom1/Atom";
+import { userTweet, forPassingId,forLocalStorageIndex} from "../../../Recoil/Atom1/Atom";
 import { Avatar } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SyncIcon from "@mui/icons-material/Sync";
@@ -19,6 +19,7 @@ function Tweetpost() {
 
   const tweetPostData = useRecoilValue(userTweet);
   const index = useRecoilValue(forPassingId);
+  const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   // console.log(post[index].tweetComment[0].tweetComment)
   //console.log(index)
   return (
@@ -85,7 +86,7 @@ function Tweetpost() {
                   <>
                     <span className={style2.text}>
                       <h3>
-                        {Data[Data.length-1].Name}
+                        {Data[getLocalStorageIndex].Name}
                         <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem" }} />
                       </h3>
                     </span>

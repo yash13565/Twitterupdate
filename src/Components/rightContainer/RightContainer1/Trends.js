@@ -48,14 +48,22 @@ const Trends = () => {
   const [isShowingAllTrendings , setIsShowingAllTrendings] = useState(false)
   const updateId = (id) => setSelectedId(id);
 
-  const HandleClick = () => {
-    const tempArr = [];
-    isNotIntrested.forEach((el) => {
-      if (el.id !== selectedId) {
-        tempArr.push(el);
+  const HandleClick = (selectedId) => {
+    // const tempArr = [];
+    // isNotIntrested.forEach((el) => {
+    //   if (el.id !== selectedId) {
+    //     tempArr.push(el);
+    //   }
+    // });
+    // setIsNotIntrested(tempArr);
+    setIsNotIntrested(prev => ( prev.map(el => {
+      if (el.id === selectedId) {
+        el.isNotInterested = false;
       }
-    });
-    setIsNotIntrested(tempArr);
+      return el
+    })))
+    console.log('changed')
+    console.log(isNotIntrested[0].isNotInterested)
   };
 
   function handleRequestSeeAll () {
