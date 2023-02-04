@@ -8,14 +8,14 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import style2 from "./TweetPost.module.css";
+import style2 from "./Tweetpost.module.css";
 import { tweetPosts } from "../../../ConstData/ConstData";
 import { useState } from "react";
 // import TweetReply from '../../../Atom/TweetReply/TweetReply';
 // import CustomButton from '../../../Atom/Button/CustomButton';
 function Tweetpost() {
   const [post, setPost] = useState(tweetPosts);
-  let Data = JSON.parse(localStorage.getItem("user0"));
+  let Data = JSON.parse(localStorage.getItem("user"));
 
   const tweetPostData = useRecoilValue(userTweet);
   const index = useRecoilValue(forPassingId);
@@ -33,7 +33,7 @@ function Tweetpost() {
             <span className={style2.text}>
               <h3>
                 {tweetPostData.name}
-                <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem"  }} />
+                <VerifiedIcon style={{ color: "blue" }} />
               </h3>
             </span>
             <p>{tweetPostData.tweetText}</p>
@@ -68,45 +68,7 @@ function Tweetpost() {
           <UploadIcon />
         </div>
       </div>
-      <div className={style2.wrapper}>
-        <div className={style2.container1}>
-          <div>
-            <Avatar
-              className={style2.avatar}
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Elon_Musk_2015.jpg/408px-Elon_Musk_2015.jpg"
-            />
-          </div>
-
-          <div className={style2.innercontainer}>
-            <span className={style2.text}>
-              <h3>
-                Elon Musk
-                <VerifiedIcon style={{color: "#1D9BF0", fontSize: "1.5rem"  }} />
-              </h3>
-            </span>
-            <p>{tweetPostData.tweetText}</p>
-          </div>
-        </div>
-        <div className={style2.icons}>
-          <span>
-            {tweetPostData.tweetCount}
-            <ChatBubbleOutlineIcon />
-          </span>
-          <span>
-            {tweetPostData.retweetCount}
-            <SyncIcon />
-          </span>
-          <span>
-            {tweetPostData.likesCount}
-            <FavoriteBorderIcon />
-          </span>
-          <span>
-            {tweetPostData.viewsCount}
-            <PollIcon />
-          </span>
-          <UploadIcon />
-        </div>
-      </div>
+     
       {post[index].tweetComment.length > 0 ? (
         <>
           {post[index].tweetComment.map((data) => (
@@ -123,7 +85,7 @@ function Tweetpost() {
                   <>
                     <span className={style2.text}>
                       <h3>
-                        {Data.Name}
+                        {Data[Data.length-1].Name}
                         <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem" }} />
                       </h3>
                     </span>
@@ -156,6 +118,45 @@ function Tweetpost() {
       ) : (
         <></>
       )}
+       <div className={style2.wrapper}>
+        <div className={style2.container1}>
+          <div>
+            <Avatar
+              className={style2.avatar}
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Elon_Musk_2015.jpg/408px-Elon_Musk_2015.jpg"
+            />
+          </div>
+
+          <div className={style2.innercontainer}>
+            <span className={style2.text}>
+              <h3>
+                Elon Musk
+                <VerifiedIcon style={{ color: "blue" }} />
+              </h3>
+            </span>
+            <p>{tweetPostData.tweetText}</p>
+          </div>
+        </div>
+        <div className={style2.icons}>
+          <span>
+            {tweetPostData.tweetCount}
+            <ChatBubbleOutlineIcon />
+          </span>
+          <span>
+            {tweetPostData.retweetCount}
+            <SyncIcon />
+          </span>
+          <span>
+            {tweetPostData.likesCount}
+            <FavoriteBorderIcon />
+          </span>
+          <span>
+            {tweetPostData.viewsCount}
+            <PollIcon />
+          </span>
+          <UploadIcon />
+        </div>
+      </div>
     </>
   );
 }

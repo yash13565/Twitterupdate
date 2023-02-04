@@ -9,7 +9,8 @@ border: 1px white solid;
     z-index: 10;
     display: flex;
     gap: 1.5rem;
-    border-bottom: 0.5px solid var(--twitter-background);
+    border-bottom: 1px rgb(60, 60, 60) solid;
+
     padding: 0.93rem 1.25rem;
     position: sticky;
   }
@@ -44,15 +45,25 @@ border: 1px white solid;
     width: 7.225rem;
     height: 2.25rem;
     border-radius: 25px;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
   font-size: 1rem;
   border: 1rem ;
   background:none;
   color: white;
   border: 1px white solid;
+  font-weight: bold;
   
 
 }
 .textcontaint{
     padding: 1rem;
     color: white;
+}
+.followers{
+  color:silver ;
+  padding-right: 2rem;
+}
+.followerscont{
+  margin-top: 1.2rem;
 }

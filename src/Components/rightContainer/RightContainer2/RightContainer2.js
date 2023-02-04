@@ -37,8 +37,22 @@ function Righthomebox2() {
       text: "Akshay",
       text2: "akshay@gmail.com",
     },
+    {
+      id: 5,
+      tag: <i class="fa fa-solid fa-badge-check"></i>,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjj_oz7crwHtUQj0jJuvLq-ILk5oikP_3FFL-mDJqk&s",
+      text: "mahi",
+      text2: "virat@gmail.com",
+    },
+    {
+      id: 6,
+      tag: <i class="fa fa-solid fa-badge-check"></i>,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjj_oz7crwHtUQj0jJuvLq-ILk5oikP_3FFL-mDJqk&s",
+      text: "virat",
+      text2: "virat@gmail.com",
+    },
   ]);
-  const [trending , setTrendings] = useState(followContainer.slice(0,2))
+  const [trending , setTrendings] = useState(followContainer.slice(0,4))
   const [isShowingAllTrendings , setIsShowingAllTrendings] = useState(false)
 
   const handleClick = (id) => {
@@ -57,17 +71,17 @@ function Righthomebox2() {
   function handleRequestSeeAll () {
       setIsShowingAllTrendings(!isShowingAllTrendings)
       if(isShowingAllTrendings) {
-         return setTrendings(followContainer.slice(0,2))
+         return setTrendings(followContainer.slice(0,4))
       }
       setTrendings(followContainer)
   }
   return (
-    <div className={style.container} >
+    <div className={style.container}>
       <h1>Who to follow</h1>
       <div className={style.main}>
-        {trending.map((menu,index) => {
+        {trending.map((menu) => {
           return (
-            <div className={style.wrapper} key={index}>
+            <div className={style.wrapper}>
               <Avatar alt="Remy Sharp" src={menu.src} />
               <div className={style.img}>
                 <h3>

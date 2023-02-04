@@ -5,7 +5,7 @@ import Register from "./Pages/SignUp/Register";
 import Home from "./Pages/Home/Home";
 import Profile from "./Pages/Profile/Profile";
 import Profile2 from "./Pages/Profile2/Profile2";
-import Tweetpage from "./Pages/Tweet/TweetPage";
+import Tweetpage from "./Pages/Tweet/Tweetpage";
 function App() {
   return (
     <>
@@ -13,10 +13,10 @@ function App() {
         <Routes>
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/Profile/:myname" element={<Profile />}/>
+          <Route path="/" element={<Home />} /> 
+          <Route path="/Profile/:name" element={<Profile />} />
           <Route path="/Profile2/:name" element={<Profile2 />} />
-          <Route path="/Tweetpage" element={<Tweetpage />} />
+          <Route path="/Tweetpage" element={<Tweetpage />}/>
         </Routes>
       </Router>
     </>

@@ -3,7 +3,8 @@
     display: flex;
     justify-content:flex-start;
     flex-direction: column;
-    border: 1px blueviolet solid;
+    border: 1px rgb(60, 60, 60) solid;
+
     gap: 1rem;
    padding: 2rem;
   }
@@ -26,3 +27,4 @@
   .avatar{
     z-index: -1;
   }
+  

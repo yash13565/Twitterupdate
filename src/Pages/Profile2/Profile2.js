@@ -9,11 +9,11 @@ import { useNavigate } from "react-router-dom";
 function Profile2() {
 
     const isUserLoggedIn = useRecoilValue(isLoginAtom);
-    const nevigate = useNavigate();
+    const navigate = useNavigate();
   
     useEffect(() => {
       if (!isUserLoggedIn) {
-        nevigate("/Login");
+        navigate("/Login");
       }
     });
 

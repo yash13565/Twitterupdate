@@ -44,35 +44,27 @@ const Trends = () => {
     },
   ]);
   const [selectedId, setSelectedId] = useState(null);
-  const [trending, setTrendings] = useState(isNotIntrested.slice(0, 2))
-  const [isShowingAllTrendings, setIsShowingAllTrendings] = useState(false)
+  const [trending , setTrendings] = useState(isNotIntrested.slice(0,2))
+  const [isShowingAllTrendings , setIsShowingAllTrendings] = useState(false)
   const updateId = (id) => setSelectedId(id);
 
-  const HandleClick = (selectedId) => {
-    // let tempArr=[...isNotIntrested]
-    // isNotIntrested.forEach((el) => {
-    //   if (el.id !== selectedId) {
-    //     tempArr.push(el);
-    //   }
-    // });
-    // setIsNotIntrested(tempArr);
-    setIsNotIntrested(prev => ( prev.map(el => {
-      if (el.id === selectedId) {
-        el.isNotInterested = false;
+  const HandleClick = () => {
+    const tempArr = [];
+    isNotIntrested.forEach((el) => {
+      if (el.id !== selectedId) {
+        tempArr.push(el);
       }
-      return el
-    })))
-    console.log('changed')
-    console.log(isNotIntrested[0].isNotInterested)
+    });
+    setIsNotIntrested(tempArr);
   };
 
-  function handleRequestSeeAll() {
+  function handleRequestSeeAll () {
     setIsShowingAllTrendings(!isShowingAllTrendings)
-    if (isShowingAllTrendings) {
-      return setTrendings(isNotIntrested.slice(0, 2))
+    if(isShowingAllTrendings) {
+       return setTrendings(isNotIntrested.slice(0,2))
     }
     setTrendings(isNotIntrested)
-  }
+}
 
   return (
     <div className={style.keywords}>
@@ -80,11 +72,9 @@ const Trends = () => {
         <div className={style.keyword__heading}>
           <h4 className={style.heading4}>What's happening</h4>
         </div>
-        {trending.map((keyword, index) => {
+        {trending.map((keyword) => {
           return (
-            
             <div
-              key={index}
               className={style.container}
               onClick={() => {
                 updateId(keyword.id);
@@ -100,7 +90,7 @@ const Trends = () => {
                 </div>
               </div>
               <div className={style.btn}>
-                <Dialog2 onClick={() => HandleClick(keyword.id)} />
+                <Dialog2 onClick={HandleClick} />
               </div>
             </div>
           );
@@ -108,7 +98,7 @@ const Trends = () => {
         <div>
           <CustomButton
             customCss={style.btn2}
-            buttonText={isShowingAllTrendings ? 'Show Less' : 'Show More'}
+            buttonText= {isShowingAllTrendings ? 'Show Less' : 'Show More'} 
             btnNext={handleRequestSeeAll}
           />
         </div>

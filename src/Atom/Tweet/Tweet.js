@@ -2,26 +2,28 @@ import React, { useRef, useState } from "react";
 import style from "./Tweet.module.css";
 import { FaGlobe, FaImage, FaMapMarker } from "react-icons/fa";
 import { FiCamera } from "react-icons/fi";
-import { HiOutlineGif } from "react-icons/hi2";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
+import ConstData from "../../ConstData/ConstData";
 import { tweetPosts } from "../../ConstData/ConstData";
-import { useRecoilState } from "recoil";
-import { isTweetPost, Personaltweet } from "../../Recoil/Atom1/Atom";
+import { useRecoilState ,useRecoilValue} from "recoil";
+import { isTweetPost ,Personaltweet ,forLocalStorageIndex} from "../../Recoil/Atom1/Atom";
 import { Avatar } from "antd";
 
 function Tweet() {
+  let Data = JSON.parse(localStorage.getItem("user"));
+  const [personal, setPersonal ] = useRecoilState(Personaltweet);
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-  const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet);
+  const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const [forTrue, setForTrue] = useState(0);
   const [storeArray, setStoreArray] = useState("");
-  let Data = JSON.parse(localStorage.getItem("user0"));
   const inputRef = useRef(null);
+  const disabled=(!storeArray)
   const Icons = [
-    { id: 0, icon: <HiOutlineGif /> },
+    { id: 0, icon: <FaGlobe /> },
     { id: 1, icon: <FaImage />, action: "pickImage" },
     { id: 2, icon: <FaMapMarker /> },
     { id: 3, icon: <FiCamera /> },
@@ -42,6 +44,7 @@ function Tweet() {
     let reader = new FileReader();
     reader.onload = (e) => {
       setImage(e.target.result);
+      
     };
     reader.readAsDataURL(e.target.files[0]);
   }
@@ -49,8 +52,8 @@ function Tweet() {
     setIsOpen(true);
 
     let newObj = {
-      name: Data.Name,
-      handlerName: Data.Email,
+      name: Data[getLocalStorageIndex].Name,
+      handlerName:  Data[getLocalStorageIndex].Email,
       organization: "United States government organization",
       tweetText: storeArray,
       tweetPic: image,
@@ -67,24 +70,18 @@ function Tweet() {
 
     setForTrue(forTrue + 1);
     setLoginStatus(loginStatus + 1);
-    inputRef.current.value = "";
-    setProfileTweet([...profileTweet, newObj]);
+    inputRef.current.value=""
+    setPersonal([newObj,...personal])
+    
   }
-  function handleClose() {
-    setIsOpen(false);
-  }
-  const disabled=(!storeArray)
+
   return (
     <>
       <div className={style.parentContainer}>
         <div className={style.main}>
-          <CustomButton
-            buttonText="X"
-            customCss={style.btnClose}
-            btnNext={handleClose}
-          />
           {/* <button onClick={Handleclose}>X</button> */}
           <div className={style.wrapper}>
+            <Avatar></Avatar>
             <textarea
               placeholder="What's happening?........"
               rows={8}
@@ -104,24 +101,24 @@ function Tweet() {
             <div className={style.iconscontainer}>
               {Icons.map((menu) => {
                 return (
-                  <div key={menu.id} className={style.iconsContent}>
-                    <div
-                      className={style.icons}
-                      onClick={() => handleOnClickIcon(menu.action)}
-                    >
-                      <div>{menu.icon}</div>
-                    </div>
+                  <div
+                    className={style.icons}
+                    key={menu.id}
+                    onClick={() => handleOnClickIcon(menu.action)}
+                  >
+                    <div>{menu.icon}</div>
                   </div>
                 );
               })}
-              <CustomButton
-                buttonText="Tweet"
-                btnNext={handleNewTweet}
-                customCss={style.button}
-                disabled={disabled}
-              />
+                 <CustomButton
+                 disable={disabled}
+            buttonText="Tweet"
+            btnNext={handleNewTweet}
+            customCss={style.button}
+          />
             </div>
           </div>
+       
         </div>
         {/* hidden input */}
         <input

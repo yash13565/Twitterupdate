@@ -17,24 +17,28 @@ export const userProfile = atom({
   key: "userProfile",
   default: {},
 });
+
+
+export const isTweet = atom({
+  key: "isTweet",
+  default: 0,
+});
+
 export const userTweet = atom({
   key: "userTweet",
   default: {},
 });
-export const myTweet=atom({
-  key:'myTweet',
-  default:[],
-})
+
+export const userTweetProfile = atom({
+  key: "userTweetProfile",
+  default: {},
+});
+
 export const Personaltweet = atom({
   key: "Personaltweet",
   default: [],
 });
 
-
-export const handleProfileAtom=atom({
-  key:'handleProfile',
-  default:null,
-})
 export const isTweetreply = atom({
   key: "isTweetreply",
   default: 0,
@@ -50,3 +54,9 @@ export const forPassingId = atom({
   key: "Passid",
   default:1,
 });
+
+export const forLocalStorageIndex = atom({
+  key: "forLocalStorageIndex",
+  default:0,
+});
+

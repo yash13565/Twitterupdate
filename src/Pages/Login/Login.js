@@ -5,7 +5,7 @@ import { FaTwitter } from "react-icons/fa";
 import Input from "../../Atom/Input/Input";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
-import { isLoginAtom } from "../../Recoil/Atom1/Atom";
+import { isLoginAtom,forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
 
 import { Link } from "react-router-dom";
 import { isValidLogin } from "../../helper";
@@ -17,6 +17,7 @@ function Login() {
   const [passWordValue, setPasswordValue] = useState("");
   const [localstorageKey, setLocalstorageKey] = useState();
   const [loginError, setLoginError] = useState("");
+  const setLocalstorageIndex=useSetRecoilState(forLocalStorageIndex)
   const setLoginStatus = useSetRecoilState(isLoginAtom);
   function loginValue(inputLogin) {
     setLoginV(inputLogin);
@@ -50,6 +51,7 @@ function Login() {
           //const store=i;
           console.log(element.Email)
           setLocalstorageKey(i);
+          setLocalstorageIndex(i)
         }
 
 
@@ -66,6 +68,7 @@ function Login() {
       setNextBtn(false);
       setLoginError("User Not Found");
     }
+    
   };
   const handleLogIn = () => {
  

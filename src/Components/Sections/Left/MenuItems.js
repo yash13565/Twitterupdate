@@ -15,16 +15,19 @@ import { VscBellDot } from "react-icons/vsc";
 import { Avatar } from "@mui/material";
 import CustomButton2 from "../../../Atom/Button/CustomButton2";
 import DialogBox from "../../Dialog/DialogBox";
-import { Link, useNavigate } from "react-router-dom";
-import {myTweet } from "../../../Recoil/Atom1/Atom";
+import { useNavigate } from "react-router-dom";
+import {forLocalStorageIndex} from "../../../Recoil/Atom1/Atom"
+import { useRecoilValue } from "recoil";
+
 
 function LeftSec() {
   const nevigate = useNavigate();
-  const [storeArray,setStoreArray]=useState('')
-  let Data = JSON.parse(localStorage.getItem("user0"));
-  console.log(Data.Name)
-  let paramsValue=Data.Name
-  // const disabled=(!storeArray)
+  let Data = JSON.parse(localStorage.getItem("user"));
+  const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
+ // console.log(Data)
+  //console.log(Data[2].Name)
+  console.log( getLocalStorageIndex)
+  
   const menu = [
     { id: 1, icon: <FaHouseUser />, Name: <p onClick={()=> nevigate("/") }>Home</p> },
     { id: 2, icon: <FaHashtag />, Name: "Explore" },
@@ -32,7 +35,7 @@ function LeftSec() {
     { id: 4, icon: <HiOutlineMail />, Name: "Message" },
     { id: 5, icon: <BsBookmark />, Name: "Bookmarks" },
     { id: 6, icon: <TbFileText />, Name: "Lists" },
-    { id: 7, icon: <BsPerson />, Name: <p onClick={()=>  nevigate( `/Profile/${paramsValue}`) }>Profile</p> },
+    { id: 7, icon: <BsPerson />, Name: <p onClick={()=> nevigate( `/Profile/${paramsValue}`) }>Profile</p> },
     { id: 8, icon: <CgMoreO />, Name: "More" },
   ];
   const [isOpen, SetisOpen] = useState(false);
@@ -49,11 +52,8 @@ function LeftSec() {
   const handleClickClose = () => {
     setOpen(false);
   };
-  function redirectToProfile() {
-    alert("i am, click")
-   
-  }
-
+  var paramsValue=Data[getLocalStorageIndex].Name
+  //console.log(paramsValue)
   return (
     <>
       <div className={style.container}>
@@ -61,7 +61,7 @@ function LeftSec() {
           <div className={style.innerContainer2}>
             <div className={style.logo}>
              
-              <p  onClick={()=> nevigate("/") }> <FaTwitter style={{cursor:'pointer'}}/></p>
+              <p onClick={()=> nevigate("/") }> <FaTwitter /></p>
             </div>
 
             {menu.map((menu,index) => {
@@ -88,7 +88,6 @@ function LeftSec() {
                   fontSize: "15px",
                   lineHeight: "40px",
                 }}
-               
               >
                 <Tweet />
               </Dialog>
@@ -97,13 +96,13 @@ function LeftSec() {
           <div>
             <CustomButton2
               picture={
-               <span onClick={redirectToProfile}> <Avatar
+                <Avatar
                   alt="Remy Sharp"
-                  src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                /></span>
+                  src="https://media.giphy.com/media/dXavF0qnux9vNtNHfc/giphy-downsized-large.gif"
+                />
               }
-              text={Data?.Name}
-              text2={Data?.Email}
+              text={Data[getLocalStorageIndex].Name}
+              text2={Data[getLocalStorageIndex].Email}
               button={handleOpen}
               customCss={style.button2}
             />

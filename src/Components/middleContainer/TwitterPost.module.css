@@ -3,7 +3,8 @@
   display: flex;
   justify-content:flex-start;
   flex-direction: column;
-  border: 1px solid white;
+  border: 1px rgb(60, 60, 60) solid;
+
   gap: 1rem;
  padding: 2rem;
 }
@@ -13,6 +14,9 @@
   justify-content:flex-start;
   gap: 1rem;
 }
+.Dialog{
+  backdrop-filter: blur(5px);
+}
 .icons{
   display: flex;
   flex-direction: row;
@@ -20,7 +24,7 @@
   color: rgb(102, 102, 192);
 }
 .img{
-text-align: center;
+padding-left: 4rem;
 
 }
 .avatar{
