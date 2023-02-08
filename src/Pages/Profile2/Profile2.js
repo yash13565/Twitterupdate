@@ -13,7 +13,7 @@ function Profile2() {
   
     useEffect(() => {
       if (!isUserLoggedIn) {
-        navigate("/Login");
+        navigate("/");
       }
     });
 

@@ -7,19 +7,21 @@ import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { tweetPosts } from "../../ConstData/ConstData";
 import { useEffect } from "react";
-import { useRecoilState,useRecoilValue } from "recoil";
+import { useRecoilState,useRecoilValue, useSetRecoilState } from "recoil";
 
-import { isTweetPost,Personaltweet,forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
+import { isTweetPost,Personaltweet,forLocalStorageIndex,countForTweet } from "../../Recoil/Atom1/Atom";
+import { json } from "react-router-dom";
 
 function WhatHappening() {
   let Data = JSON.parse(localStorage.getItem("user"));
   const [image, setImage] = useState("");
   const [storeArray, setStoreArray] = useState("");
-  const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
+  const [loginStatus,setLoginStatus] = useRecoilState(isTweetPost);
   const [personal, setPersonal ] = useRecoilState(Personaltweet);
   const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   const inputRef = useRef(null);
   const disabled=(!storeArray)
+ // const setCountForRecoil=useSetRecoilState(countForTweet)
 
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
@@ -32,6 +34,7 @@ function WhatHappening() {
 
   function takeTweet(e) {
     setStoreArray(e.target.value);
+   
   }
   // function to triiger picking image input
   function handleOnClickIcon(action) {
@@ -50,12 +53,13 @@ function WhatHappening() {
     reader.readAsDataURL(e.target.files[0]);
   }
   function handleNewTweet() {
+   // localStorage.setItem("Tweet",JSON.stringify(storeArray))
     let newObj = {
       name: Data[getLocalStorageIndex].Name,
       handlerName:  Data[getLocalStorageIndex].Email,
       organization: "United States government organization",
       tweetText: storeArray,
-      tweetPic: image,
+      tweetPic:  image,
       tweetCount: 100,
       retweetCount: 100,
       likesCount: 100,
@@ -64,8 +68,10 @@ function WhatHappening() {
       followings: 400,
       joinedDate: "22 dec 2022",
     };
+    let oldData = JSON.parse(localStorage.getItem("constTweetPosts"))
+    localStorage.setItem("constTweetPosts" , JSON.stringify([{...newObj},...oldData]))
 
-    tweetPosts.unshift(newObj);
+   // tweetPosts.unshift(newObj);
     setLoginStatus(loginStatus + 1);
     setImage("");
     setStoreArray("");

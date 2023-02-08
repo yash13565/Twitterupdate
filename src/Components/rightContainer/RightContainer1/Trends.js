@@ -9,37 +9,37 @@ const Trends = () => {
   const [isNotIntrested, setIsNotIntrested] = useState([
     {
       id: 1,
-      isNotInterested: true,
-      country: "hi in India",
-      keyword: "#Allu Arjun",
-      totalKeywords: "95000k Tweets",
+      isNotIntrested: false,
+      country: "Trending in India",
+      keyword: "#Ms Dhoni",
+      totalKeywords: "8000k Tweets",
     },
     {
       id: 2,
-      isNotInterested: false,
+      isNotIntrested: false,
       country: "Trending in India",
-      keyword: "#Akshay Kumar",
+      keyword: "#Virat kohli",
       totalKeywords: "6000k Tweets",
     },
     {
       id: 3,
-      isNotInterested: false,
-      country: "Trending in celebrity",
-      keyword: "#Malvika",
-      totalKeywords: "20560k Tweets",
+      isNotIntrested: false,
+      country: "Trending in Sports",
+      keyword: "#RohitSharma",
+      totalKeywords: "2560k Tweets",
     },
     {
       id: 4,
-      isNotInterested: true,
-      country: "Trending in love",
-      keyword: "#brokenbutbeautiful",
+      isNotIntrested: true,
+      country: "Trending in Sports",
+      keyword: "#ViratKohli",
       totalKeywords: "2000k Tweets",
     },
     {
       id: 5,
-      isNotInterested: false,
+      isNotIntrested: false,
       country: "Trending in Sports",
-      keyword: "#IndvNz",
+      keyword: "#sachin",
       totalKeywords: "2000k Tweets",
     },
   ]);
@@ -48,22 +48,14 @@ const Trends = () => {
   const [isShowingAllTrendings , setIsShowingAllTrendings] = useState(false)
   const updateId = (id) => setSelectedId(id);
 
-  const HandleClick = (selectedId) => {
-    // const tempArr = [];
-    // isNotIntrested.forEach((el) => {
-    //   if (el.id !== selectedId) {
-    //     tempArr.push(el);
-    //   }
-    // });
-    // setIsNotIntrested(tempArr);
-    setIsNotIntrested(prev => ( prev.map(el => {
-      if (el.id === selectedId) {
-        el.isNotInterested = false;
+  const HandleClick = () => {
+    const tempArr = [];
+    isNotIntrested.forEach((el) => {
+      if (el.id !== selectedId) {
+        tempArr.push(el);
       }
-      return el
-    })))
-    console.log('changed')
-    console.log(isNotIntrested[0].isNotInterested)
+    });
+    setIsNotIntrested(tempArr);
   };
 
   function handleRequestSeeAll () {

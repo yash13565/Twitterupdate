@@ -86,7 +86,7 @@ function Login() {
       setLoginStatus(true);
       alert("succesfully login");
       
-      nevigate("/");
+      nevigate("/Home");
     } else {
       alert("false");
     }

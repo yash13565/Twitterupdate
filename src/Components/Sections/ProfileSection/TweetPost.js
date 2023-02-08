@@ -1,6 +1,6 @@
 import React from "react";
 import { useRecoilValue } from "recoil";
-import { userTweet, forPassingId,forLocalStorageIndex} from "../../../Recoil/Atom1/Atom";
+import { userTweet, forPassingId,forLocalStorageIndex } from "../../../Recoil/Atom1/Atom";
 import { Avatar } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SyncIcon from "@mui/icons-material/Sync";
@@ -14,12 +14,12 @@ import { useState } from "react";
 // import TweetReply from '../../../Atom/TweetReply/TweetReply';
 // import CustomButton from '../../../Atom/Button/CustomButton';
 function Tweetpost() {
-  const [post, setPost] = useState(tweetPosts);
+  const [post, setPost] = useState(JSON.parse(localStorage.getItem("constTweetPosts")));
+  const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   let Data = JSON.parse(localStorage.getItem("user"));
 
   const tweetPostData = useRecoilValue(userTweet);
   const index = useRecoilValue(forPassingId);
-  const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   // console.log(post[index].tweetComment[0].tweetComment)
   //console.log(index)
   return (

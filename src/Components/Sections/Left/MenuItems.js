@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaTwitter } from "react-icons/fa";
-import { FaHouseUser, FaHashtag, FaNotification } from "react-icons/fa";
+import { FaHouseUser, FaHashtag} from "react-icons/fa";
 // import { GrNotification } from "react-icons/gr";
 import { BsBookmark, BsPerson } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
@@ -29,7 +29,7 @@ function LeftSec() {
   console.log( getLocalStorageIndex)
   
   const menu = [
-    { id: 1, icon: <FaHouseUser />, Name: <p onClick={()=> nevigate("/") }>Home</p> },
+    { id: 1, icon: <FaHouseUser />, Name: <p onClick={()=> nevigate("/Home") }>Home</p> },
     { id: 2, icon: <FaHashtag />, Name: "Explore" },
     { id: 3, icon: <VscBellDot />, Name: "Notifications" },
     { id: 4, icon: <HiOutlineMail />, Name: "Message" },
@@ -52,7 +52,7 @@ function LeftSec() {
   const handleClickClose = () => {
     setOpen(false);
   };
-  var paramsValue=Data[getLocalStorageIndex].Name
+  var paramsValue=Data[getLocalStorageIndex]?.Name
   //console.log(paramsValue)
   return (
     <>
@@ -61,7 +61,7 @@ function LeftSec() {
           <div className={style.innerContainer2}>
             <div className={style.logo}>
              
-              <p onClick={()=> nevigate("/") }> <FaTwitter /></p>
+              <p onClick={()=> nevigate("/Home") }> <FaTwitter /></p>
             </div>
 
             {menu.map((menu,index) => {
@@ -98,7 +98,7 @@ function LeftSec() {
               picture={
                 <Avatar
                   alt="Remy Sharp"
-                  src="https://media.giphy.com/media/dXavF0qnux9vNtNHfc/giphy-downsized-large.gif"
+                  src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 />
               }
               text={Data[getLocalStorageIndex].Name}

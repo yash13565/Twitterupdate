@@ -16,12 +16,12 @@ function TweetReply() {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
   const [post,setPost]=useState(tweetPosts)
-  const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet)
-  const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
+  // const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet)
+  // const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const[index,setIndex]=useRecoilState(forPassingId)
-  const [forTrue, setForTrue] = useState(0);
+  // const [forTrue, setForTrue] = useState(0);
   const [storeArray, setStoreArray] = useState("");
-  let Data = JSON.parse(localStorage.getItem("user0"));
+  // let Data = JSON.parse(localStorage.getItem("user0"));
   const inputRef = useRef(null);
   const Icons = [
     { id: 0, icon: <HiOutlineGif /> },
@@ -50,12 +50,17 @@ function TweetReply() {
   }
   function handleNewTweet() {
     setIsOpen(true);
-    console.log(index)
+    // console.log(index)
     let newObj1={
       tweetComment:storeArray
     }
-    post[index].tweetComment=([...post[index].tweetComment,newObj1])
-    console.log(storeArray)
+    //post[index].tweetComment=([...post[index].tweetComment,newObj1])
+    // console.log(storeArray)
+    //localStorage.setItem("const tweetPosts[2].tweetComment" , "ghyy")
+   let k=JSON.parse(localStorage.getItem("constTweetPosts"))
+   console.log(k)
+   k[index].tweetComment=([...k[index].tweetComment,newObj1])
+   localStorage.setItem("constTweetPosts", JSON.stringify(k))
 
   }
   function handleClose() {
@@ -103,7 +108,7 @@ function TweetReply() {
                 );
               })}
               <CustomButton
-                buttonText="Reply"
+                buttonText="Reply000"
                 btnNext={handleNewTweet}
                 customCss={style.button}
               />

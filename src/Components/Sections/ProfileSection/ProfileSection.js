@@ -22,28 +22,29 @@ function ProfileSection() {
     <>
     <div className={style.wrapper}>
       <div className={style.feed__header}>
-        <p onClick={()=> nevigate("/") }><WestIcon /></p>
+        <p onClick={()=> nevigate("/Home") }><WestIcon /></p>
         <h2>{Data[getLocalStorageIndex].Name}</h2>
       </div>
-        <img className={style.container} alt="bg.jpg" src="https://media.tenor.com/zisv-VYvy9QAAAAd/god-of-war-ragnarok.gif" />
+        <img className={style.container} alt="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png" />
       <div>
         <span className={style.Avatarsection}>
           <img
             className={style.img}
-            alt="profile.jpg"
-            src="https://media.giphy.com/media/dXavF0qnux9vNtNHfc/giphy-downsized-large.gif"/>
+            alt="img"
+            src="https://tinypng.com/images/social/website.jpg"/>
           <CustomButton customCss={style.btn} buttonText={"Edit profile"} />
         </span>
       </div>
       
 
-      <div key={Data.id} className={style.textcontaint}>
+<div key={Data.id} className={style.textcontaint}>
         <h2>{`${Data[getLocalStorageIndex].Name}`}</h2>
         <h4 style={{color:'silver'}}>{`${Data[getLocalStorageIndex].Email}`}</h4>
         <h5 style={{marginTop:'1rem',fontSize:'1.2rem'}}>Sexy isn't a shape it's an attitude</h5>
         <h5 style={{color:'silver',marginTop:'1rem',fontSize:'1rem',paddingBottom:'0.5rem'}}><VscCalendar/>Joined March 2022</h5>
       <div  className={style.followerscont}> 1000<span  className={style.followers}> Followers</span> 10 <span className={style.followers}>Following</span></div> 
       </div>
+    
     </div>
     <UserTweet />
    

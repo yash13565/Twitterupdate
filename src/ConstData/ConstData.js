@@ -1,11 +1,11 @@
 export const tweetPosts = [
     {
        id:0,
-        name  : 'The White House',
-        handlerName : '@The White House' ,
+        name  : 'India Tourism',
+        handlerName : '@tourism' ,
         organization : 'United States government organization',
-        tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
-        tweetPic : 'https://static.toiimg.com/imagenext/toiblogs/photo/blogs/wp-content/uploads/2016/11/4-1.jpg',
+        tweetText : 'Tourism in India has shown a phenomenal growth in the past decade. One of the reasons is that the Ministry of tourism, India has realized the immense potential of tourism in India during vacations. India travel tourism has grown rapidly with a great influx of tourists from all across the globe who have been irresistibly attracted to the rich culture, heritage, and incredible natural beauty of India. India tourism with its foggy hill stations, captivating beaches, historical monuments, golden deserts, serene backwaters, pilgrimage sites, rich wildlife, and colourful fairs capture the heart of every tourist. In addition, a variety of festivals, lively markets, vibrant lifestyle, and traditional Indian hospitality, will make your experience as an india tourist truly unforgettable and fantastic. Travel through the lovely Indian states and discover closely the resplendent colors and rich cultural locales of this incredible land.' ,
+        tweetPic : 'https://th.bing.com/th/id/OIP.dp0KODpMss_Z2N1cIzMTugHaER?w=308&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7',
         tweetCount : 100,
         retweetCount : 100 ,
         likesCount : 100,
@@ -21,7 +21,7 @@ export const tweetPosts = [
             {
                 id:0,
                 tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
-                tweetPic : 'https://media.istockphoto.com/id/137169606/photo/the-white-house-in-washington-dc.jpg?s=612x612&w=0&k=20&c=6FUEZRJWq47hAlfjy1uLC5112djoi5NKCTdAGiqMvO0=',
+                tweetPic : 'https://imgcld.yatra.com/ytimages/image/upload/t_seo_Magnum_w_373_h_248_c_fill_g_auto_q_auto:good_f_jpg/v1466686625/Ladakh_1466686621.jpg',
                 tweetCount : 100,
                 retweetCount : 100 ,
                 likesCount : 100,
@@ -350,11 +350,11 @@ export const tweetPosts = [
     },
     {
         id:3,
-        name : 'Andrew Elliott',
-        handlerName : '@andrewje_home',
+        name : 'Ms dhoni',
+        handlerName : '@dhoni',
         organization : '',
-        tweetText : 'Stolen.. Not earned. ',
-        tweetPic : 'https://pbs.twimg.com/profile_images/378800000790387702/e24150ded8f848ca487c5b22ae396dbd_400x400.jpeg',
+        tweetText : 'thala',
+        tweetPic : 'https://images.hindustantimes.com/img/2023/01/12/1600x900/Virat_Kohli_MS_Dhoni_1636427886192_1673539397747_1673539397747.jpg',
        
         tweetCount : 400,
         retweetCount : 327 ,
@@ -584,13 +584,13 @@ export const tweetPosts = [
     } ,
     {
         id:5,
-        name : 'BJP',
-        handlerName : '@BJP4India',
+        name : 'Jaipur Tourism',
+        handlerName : '@jaipur',
         organization : '',
-        tweetText : `There had been no concern even about the number of islands in the country, leave about the development. 
-        But today, India is moving ahead on the path of sustainable development managing 
-        the balance of the nature and employment of modern ways of development in these areas.`,
-        tweetPic : 'https://images.cnbctv18.com/wp-content/uploads/2022/12/Delhi-BJP-celebrate-Gujarat-elections.jpg',
+        tweetText : `Though popularly called as Pink City, Jaipur has more than just pink in its colorful kitty to catch your attention. Doesn’t matter whether you are travelling alone or with a bunch of friends or family, you will have umpteen numbers of activities to get engaged into and tons of places to visit. This is bound to keep your mood at its best while in Jaipur.
+
+The city in actual terms is a <span>‘gateway to Rajasthan’<span>. A visit to this royal city of India presents you with an overall glimpse of Rajasthan. Forts, museums, lakes, authentic food along with some ‘colourful’ shopping, all together make your stay memorable..`,
+        tweetPic : 'https://bestmediainfo.com/uploads/2020/09/Patrika-Gate_2.jpg',
         tweetCount : 650,
         retweetCount : 699 ,
         likesCount : 900,
@@ -604,7 +604,7 @@ export const tweetPosts = [
         tweets : [
             {
                 tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
-                tweetPic : 'https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080',
+                tweetPic : 'https://www.savilerowtravel.com/wp-content/uploads/2016/12/india-country-image.jpg',
                 tweetCount : 100,
                 retweetCount : 100 ,
                 likesCount : 100,
@@ -651,7 +651,7 @@ export const tweetPosts = [
             },
             {
                 tweetText : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
-                tweetPic : 'https://lh3.googleusercontent.com/8ygpNx4Er1H9LmB-D8W7cBi-qsvcDSDlWw2CVIk5bHFM77q6a46V0GNxSzopAUtvLKIApDTW7RKnrJ7m7Yp4obN1s23V3dRMrYLwvz5GJc_gu1N-M8tGkyhFYGf40nwZCg7jbgGa1g=w1920-h1080',
+                tweetPic : 'https://www.savilerowtravel.com/wp-content/uploads/2016/12/india-country-image.jpg',
                 tweetCount : 100,
                 retweetCount : 100 ,
                 likesCount : 100,

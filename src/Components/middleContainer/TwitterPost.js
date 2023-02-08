@@ -18,26 +18,26 @@ import {
   requestedProfileAtom,
   forPassingId
 } from "../../Recoil/Atom1/Atom";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { tweetPosts } from "../../ConstData/ConstData";
 import TweetReply from "../../Atom/TweetReply/TweetReply";
 
 export default function TwitterPost() {
-  const [post, setPost] = useState(tweetPosts);
+  const [post, setPost] = useState(JSON.parse(localStorage.getItem("constTweetPosts")));
   const nevigate = useNavigate();
   const[countForRender, setCountForRender]=useState(0)
   const [newPost, setNewPost] = useRecoilState(isTweetPost);
   const setId=useSetRecoilState(forPassingId);
   const[indexForD,setIndexForD]=useState()
   const [newProfile, setNewProfile] = useRecoilState(userProfile);
- // const [likesCount, setLikesCount] = useState(1000);
-  const [requestedProfile, setRequestedProfile] = useState("");
-  const [icon, setIcon] = useState("rgb(77, 75, 75)");
-  const [isOpen, SetisOpen] = useState(false);
+  const[newindex,setNewIndex]=useState()
+
   const[count,setCount]=useState(0)
-  // const setRequestedProfile = useRecoilState(requestedProfileAtom)
+  
+
 
   function handleLike(takeLikes) {
+    console.log(post[takeLikes.Index])
     
     if(post[takeLikes.Index].inrDcr===false)
     {
@@ -46,6 +46,7 @@ export default function TwitterPost() {
      setCountForRender(countForRender+1);
     post[takeLikes.Index].inrDcr=true;
     post[takeLikes.Index].color="red"
+    console.log(post)
     
     }
    
@@ -64,9 +65,9 @@ export default function TwitterPost() {
   useEffect(() => {
     fetchData();
   }, [newPost]);
-
+console.log(newPost)
   function fetchData() {
-    setPost(tweetPosts);
+    setPost(JSON.parse(localStorage.getItem("constTweetPosts")));
   }
 
   function xyz(dataName) {
@@ -80,18 +81,24 @@ export default function TwitterPost() {
     setCount(count-1)
 
   }
-  // useEffect(()=>{handleClickOpen},[count])
+  useEffect(()=>{handleClickOpen1()},[count])
   
-  
-  const handleClickOpen = (index) => {
+  function handleClickOpen1()
+  {
+    //post[newindex].isOpen=true
+    
+    //console.log(post[index].id)
+   // console.log(index)
+    setId(newindex);
+    setIndexForD(newindex)
+  }
+function handleClickOpen (index) {
  
-    post[index].isOpen=true
-     
-   //console.log(post[index].id)
-  // console.log(index)
-   setId(index);
+  post[index].isOpen=true
    setCount(count+1)
-   setIndexForD(index)
+   setNewIndex(index)
+
+  
 
 
   };

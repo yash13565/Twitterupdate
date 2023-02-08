@@ -13,7 +13,7 @@ function Home() {
 
   useEffect(() => {
     if (!isUserLoggedIn) {
-      nevigate("/Login");
+      nevigate("/");
     }
   });
 

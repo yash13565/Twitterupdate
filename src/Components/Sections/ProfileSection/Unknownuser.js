@@ -45,7 +45,7 @@ function forReply(takeData)
     <>
     <div className={style.wrapper}>
       <div className={style.feed__header}>
-        <p onClick={()=> nevigate("/") }><WestIcon /></p>
+        <p onClick={()=> nevigate("/Home") }><WestIcon /></p>
         <h2>{unknownProfileData.name}</h2>
       </div>
         <img className={style.container} src={unknownProfileData.tweetPic} />
