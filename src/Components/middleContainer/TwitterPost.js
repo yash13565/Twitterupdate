@@ -57,7 +57,7 @@ export default function TwitterPost() {
      
      setCountForRender(countForRender+1)
      post[takeLikes.Index].inrDcr=false;
-     post[takeLikes.Index].color="blue"
+     post[takeLikes.Index].color="rgb(60,60,60)"
 
     }
   }
@@ -85,10 +85,6 @@ console.log(newPost)
   
   function handleClickOpen1()
   {
-    //post[newindex].isOpen=true
-    
-    //console.log(post[index].id)
-   // console.log(index)
     setId(newindex);
     setIndexForD(newindex)
   }
@@ -97,17 +93,13 @@ function handleClickOpen (index) {
   post[index].isOpen=true
    setCount(count+1)
    setNewIndex(index)
-
-  
-
-
   };
 
   return (
     <>
       {post.map((data,i) => {
         return (
-          <div className={style.wrapper}>
+          <div key={i} className={style.wrapper}>
             <div className={style.container1}>
               <div
                 // onClick={handleRedirectProfile}

@@ -13,26 +13,6 @@ import { SouthAmerica } from '@mui/icons-material';
 
 function UserTweet() {
     const [data,setData]= useRecoilState(Personaltweet)
-    // const [pavan ,setPavan]=useState([{
-    //   name:"ram",
-    //   tweetCount:"SouthAmerica"
-    // }])
-    
-
-    // // useEffect(()=>{
-    //   if(localStorage.getItem("usertweet")){
-    //     console.log("i am pavan from local")
-    //     const UserTweetpost = JSON.parse(localStorage.getItem("usertweet"))
-    //     setData([...pavan , UserTweetpost])
-    //   }else{
-    //     console.log("i am pavan going to local")
-    //     localStorage.setItem("usertweet", JSON.stringify([pavan]));
-    //   }
-
-    // // },[data])
- 
-
-    
     
     console.log(data);
   return (
@@ -56,8 +36,8 @@ function UserTweet() {
                     </div>
         
                     <div className={style2.img}>
-                    {/* {data.tweetPic ?  */}
-              <img
+                    {data.tweetPic ? 
+              <img 
                 style={{
                   width: "30rem",
                   height: "30rem",
@@ -67,7 +47,7 @@ function UserTweet() {
                 src={x.tweetPic
                 }
               /> 
-              {/* : <></> } */}
+              : <></> }
                     </div>
                     <div className={style2.icons}>
                           <span>

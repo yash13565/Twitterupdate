@@ -13,19 +13,19 @@ import style from "./MenuItem.module.css";
 import Dialog from "@mui/material/Dialog";
 import { VscBellDot } from "react-icons/vsc";
 import { Avatar } from "@mui/material";
-import CustomButton2 from "../../../Atom/Button/CustomButton2";
-import DialogBox from "../../Dialog/DialogBox";
+// import CustomButton2 from "../../../Atom/Button/CustomButton2";
 import { useNavigate } from "react-router-dom";
 import {forLocalStorageIndex} from "../../../Recoil/Atom1/Atom"
 import { useRecoilValue } from "recoil";
+import Dialog2 from "../../Dialog2/Dialog2";
+// import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
+import Card from "../../../Atom/Card/card";
 
 
 function LeftSec() {
   const nevigate = useNavigate();
   let Data = JSON.parse(localStorage.getItem("user"));
   const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
- // console.log(Data)
-  //console.log(Data[2].Name)
   console.log( getLocalStorageIndex)
   
   const menu = [
@@ -49,11 +49,8 @@ function LeftSec() {
   const handleOpen = () => {
     setOpen(true);
   };
-  const handleClickClose = () => {
-    setOpen(false);
-  };
+ 
   var paramsValue=Data[getLocalStorageIndex]?.Name
-  //console.log(paramsValue)
   return (
     <>
       <div className={style.container}>
@@ -94,11 +91,11 @@ function LeftSec() {
             </div>
           </div>
           <div>
-            <CustomButton2
+            <Card
               picture={
                 <Avatar
                   alt="Remy Sharp"
-                  src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  src="https://w0.peakpx.com/wallpaper/357/647/HD-wallpaper-kakashi-naruto-electric-blue.jpg"
                 />
               }
               text={Data[getLocalStorageIndex].Name}
@@ -106,7 +103,7 @@ function LeftSec() {
               button={handleOpen}
               customCss={style.button2}
             />
-            <DialogBox open={open} onClose={handleClickClose} />
+           
           </div>
         </div>
       </div>

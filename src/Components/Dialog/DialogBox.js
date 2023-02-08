@@ -1,50 +1,45 @@
-import Dialog from "@mui/material/Dialog";
+// import Dialog from "@mui/material/Dialog";
 import CustomButton from "../../Atom/Button/CustomButton";
-import profileStyle from "./Dialog.module.css";
+import style from "./Dialog.module.css";
+import { Button, Popover } from "antd";
 import React from "react";
 import { useSetRecoilState } from "recoil";
 import { isLoginAtom } from "../../Recoil/Atom1/Atom";
+import { useState } from "react";
 
 
 function DialogBox(props) {
   
 
   const setLoginStatus = useSetRecoilState(isLoginAtom);
-  const { onClose, selectedValue, open } = props;
-  const handleClose = () => {
-    onClose(selectedValue);
+  const [open, setOpen] = useState(false);
+
+  const handleOpenChange = (newOpen) => {
+    setOpen(newOpen);
   };
-  function handaleClick() {
-    let text = 'Do You Logout ! \nEither Ok or Cancel';
-      if(window.confirm (text) == true){
-          setLoginStatus(false);
-    alert("successfully Logout");
-      } else {
-        text = " Cancel"
-      }
-  }
   return (
-    <Dialog 
-    onClose={handleClose} open={open}
-    PaperProps={{
-      style: {
-       borderRadius: "3rem",
-        width:"18em",
-        
-        marginTop: "32em",
-        marginRight:"72em",
-        borderRadius:'10px',
-        padding:"0.5em",
-        boxShadow:' rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;',
-        backgroundColor:"black",
-      },
-    }}>
-     
-      <div className={profileStyle.headings}>
-      <h4 className={profileStyle.h1}>Add an existing account</h4>
-      <h4 className={profileStyle.h2} onClick={handaleClick}> Log out </h4>
-      </div>
-    </Dialog>
+    <div className={style.textColor}>
+      <Popover
+       
+        content={<a onClick={props.onClick}> {props.content}</a>}
+        title={
+          <div style={{ color: "#fff", display: "flex", alignItems: "center" }}>
+            {props.title}
+          </div>
+        }
+        trigger="click"
+        open={props.open}
+        overlayInnerStyle={{
+          color: "#fff",
+          background: "black",
+          border: "1px solid #fff",
+          boxShadow: "0 0 10px #fff",
+        }}
+        onOpenChange={handleOpenChange}
+      >
+        <Button className={style.btn}>...</Button>
+      </Popover>
+    </div>
   );
 }
 export default DialogBox;

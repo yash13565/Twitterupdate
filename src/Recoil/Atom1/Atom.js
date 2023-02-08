@@ -1,18 +1,14 @@
 import { atom } from "recoil";
-
-
 export const isLoginAtom = atom({ //
   key: "isLogin",
-  default:true,
+  default:false,
 });
-
 /*use value in TwitterPost.js(middleContainer) Take value from WhatHappening.js(WhatHappening) for use in useEffect for render again 
 value is increment by one when new post is push into the array*/
 export const isTweetPost = atom({
   key: "isPost",  
   default: 0,
 });
-
 /* Take Value from TwitterPost.js for storing Unknown user object details
 Use vale in Unknownuser.js(ProfileSection) 
 for redirect the new page which is profile2 for showing the user details when we click into the user (Avatar)icon in home page

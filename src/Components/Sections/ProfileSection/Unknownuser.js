@@ -74,8 +74,7 @@ function forReply(takeData)
               
 
         return (
-          <>
-          
+          <>   
             <div key={x.id}>
             <div className={style2.wrapper} onClick={()=>forReply(({
 name:unknownProfileData.name,

@@ -5,51 +5,51 @@ import CustomButton from "../../../Atom/Button/CustomButton";
 import VerifiedIcon from '@mui/icons-material/Verified';
 
 function Righthomebox2() {
-  const [ show , setShow]= useState(false)
+  // const [ show , setShow]= useState(false)
  
   const [followContainer, setFollowContainer] = useState([
     
     {
       id: 1,
-      tag: <i class="far fa-solid fa-badge-check"></i>,
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjj_oz7crwHtUQj0jJuvLq-ILk5oikP_3FFL-mDJqk&s",
-      text: "virat",
-      text2: "virat@gmail.com",
+      tag: <i className="far fa-solid fa-badge-check"></i>,
+      src: "https://4kwallpapers.com/images/wallpapers/kakashi-hatake-naruto-amoled-black-background-artwork-1179x2556-6484.jpg",
+      text: "Kakashi",
+      text2: "kakashi@gmail.com",
     },
     {
       id: 2,
-      tag: <i class="fa fa-solid fa-badge-check"></i>,
-      src: "https://www.cricketsoccer.com/wp-content/uploads/2020/09/i.jpg",
-      text: "Rohit",
-      text2: "rohits@gmail.com",
+      tag: <i className="fa fa-solid fa-badge-check"></i>,
+      src: "https://rukminim1.flixcart.com/image/416/416/ky90scw0/poster/m/6/4/medium-redcloud-goku-ultra-instinct-wall-poster-for-room-for-original-imagagedrzjxskyj.jpeg?q=70",
+      text: "Goku",
+      text2: "Goku@gmail.com",
     },
     {
       id: 3,
-      tag: <i class="fa fa-solid fa-badge-check"></i>,
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjj_oz7crwHtUQj0jJuvLq-ILk5oikP_3FFL-mDJqk&s",
-      text: "mahi",
-      text2: "virat@gmail.com",
+      tag: <i className="fa fa-solid fa-badge-check"></i>,
+      src: "https://w0.peakpx.com/wallpaper/10/665/HD-wallpaper-malavika-sharma-malavika-sharma-red-tollywood.jpg",
+      text: "Malvika",
+      text2: "malvika@gmail.com",
     },
     {
       id: 4,
-      tag: <i class="fa fa-solid fa-badge-check"></i>,
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjj_oz7crwHtUQj0jJuvLq-ILk5oikP_3FFL-mDJqk&s",
-      text: "virat",
-      text2: "virat@gmail.com",
+      tag: <i className="fa fa-solid fa-badge-check"></i>,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQD0pQ3wmb1sN5Cr_jkBwN9lrHWp0FKdiCzw&usqp=CAU",
+      text: "Ketika",
+      text2: "Ketika@gmail.com",
     },
     {
       id: 5,
-      tag: <i class="fa fa-solid fa-badge-check"></i>,
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjj_oz7crwHtUQj0jJuvLq-ILk5oikP_3FFL-mDJqk&s",
-      text: "mahi",
-      text2: "virat@gmail.com",
+      tag: <i className="fa fa-solid fa-badge-check"></i>,
+      src: "https://www.pinkvilla.com/imageresize/akhil_akkineni_would_love_to_play_virat_kohli_0.jpg?width=752&t=pvorg",
+      text: "Akhil",
+      text2: "akhil@gmail.com",
     },
     {
       id: 6,
-      tag: <i class="fa fa-solid fa-badge-check"></i>,
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjj_oz7crwHtUQj0jJuvLq-ILk5oikP_3FFL-mDJqk&s",
-      text: "virat",
-      text2: "virat@gmail.com",
+      tag: <i className="fa fa-solid fa-badge-check"></i>,
+      src: "https://images.indianexpress.com/2022/09/bumrah.jpg",
+      text: "Jasprit",
+      text2: "Jsprit@gmail.com",
     },
   ]);
   const [trending , setTrendings] = useState(followContainer.slice(0,4))
@@ -65,8 +65,6 @@ function Righthomebox2() {
     setFollowContainer(updatedFollowContainer);
   };
 
- 
-
   // handle seeAll request
   function handleRequestSeeAll () {
       setIsShowingAllTrendings(!isShowingAllTrendings)
@@ -79,9 +77,9 @@ function Righthomebox2() {
     <div className={style.container}>
       <h1>Who to follow</h1>
       <div className={style.main}>
-        {trending.map((menu) => {
+        {trending.map((menu,id) => {
           return (
-            <div className={style.wrapper}>
+            <div key={id} className={style.wrapper}>
               <Avatar alt="Remy Sharp" src={menu.src} />
               <div className={style.img}>
                 <h3>
@@ -113,5 +111,6 @@ function Righthomebox2() {
     </div>
   );
 }
+
 
 export default Righthomebox2;

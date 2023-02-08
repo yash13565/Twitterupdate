@@ -44,7 +44,7 @@ function Tweetpost() {
         <div className={style2.img}>
           <img
             style={{ width: "30rem", height: "30rem", borderRadius: "15px" }}
-            alt="picture"
+            alt="Urlist.jpg"
             src={tweetPostData.tweetPic}
           />
         </div>
@@ -78,7 +78,7 @@ function Tweetpost() {
                 <div>
                   <Avatar
                     className={style2.avatar}
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Steve_Jobs_Headshot_2010-CROP2.jpg/800px-Steve_Jobs_Headshot_2010-CROP2.jpg"
+                    src="https://i.pinimg.com/originals/95/e0/0a/95e00a18b1a7c7a5f9868e71b020c3c2.gif"
                   />
                 </div>
 
@@ -124,7 +124,7 @@ function Tweetpost() {
           <div>
             <Avatar
               className={style2.avatar}
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Elon_Musk_2015.jpg/408px-Elon_Musk_2015.jpg"
+              src="https://i.pinimg.com/originals/95/e0/0a/95e00a18b1a7c7a5f9868e71b020c3c2.gif"
             />
           </div>
 
