@@ -7,9 +7,6 @@ import DialogBox from '../../Components/Dialog/DialogBox';
 function Card(props) {
   const setLoginStatus = useSetRecoilState(isLoginAtom);
   const [open, setOpen] = useState(false);
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
   const HandleClick = () => {
     setOpen(false);
   };

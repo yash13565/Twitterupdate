@@ -69,7 +69,6 @@ export const tweetPosts = [
         ],
       },
       {
-        id: 1,
         tweetText:
           "God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. It began in 2005 on the PlayStation 2 video game console and has become a flagship series for PlayStation, consisting of nine installments across multiple platforms. ",
         tweetPic:
@@ -122,13 +121,13 @@ export const tweetPosts = [
   },
   {
     id: 1,
-    name: "TOny Stark",
-    handlerName: "@tonystark",
+    name: "Lucky ALi",
+    handlerName: "@luckyali",
     organization: "",
     tweetText:
-      "Humble as ever",
+      "For someone to live another has to die. That is wildlife. My shot that was featured in NatGeo. Shot using @NikonIndia gear.",
     tweetPic:
-      "https://64.media.tumblr.com/7801595a48de4135cae37d10e578100e/ff7e5b9e770c3ce3-d1/s540x810/0b5fdeca6083455078bb024cf094bdc67fc51240.gif",
+      "https://media.kulfyapp.com/0UY69O/0UY69O-360.gif",
     tweetCount: 200,
     retweetCount: 200,
     likesCount: 200,
@@ -143,9 +142,9 @@ export const tweetPosts = [
     tweets: [
       {
         tweetText:
-          "Assassin's Creed is an action-adventure game developed by Ubisoft Montreal and published by Ubisoft. ",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
         tweetPic:
-          "https://64.media.tumblr.com/7801595a48de4135cae37d10e578100e/ff7e5b9e770c3ce3-d1/s540x810/0b5fdeca6083455078bb024cf094bdc67fc51240.gif",
+          "https://media.kulfyapp.com/0UY69O/0UY69O-360.gif",
         tweetCount: 100,
         retweetCount: 100,
         likesCount: 100,
@@ -191,9 +190,9 @@ export const tweetPosts = [
       },
       {
         tweetText:
-          "Assassin's Creed is an action-adventure game developed by Ubisoft Montreal and published by Ubisoft. ",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
         tweetPic:
-          "https://media2.giphy.com/media/QmpBl9zEeJwFtwh6eP/giphy.gif",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcspQfyJHGWHztlng2V7323CSTk5UumAx0eA&usqp=CAU",
         tweetCount: 100,
         retweetCount: 100,
         likesCount: 100,
