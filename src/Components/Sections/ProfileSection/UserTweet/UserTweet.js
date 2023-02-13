@@ -38,16 +38,20 @@ function UserTweet() {
                     <div className={style2.img}>
                     {data.tweetPic ? 
               <img 
-                style={{
-                  width: "30rem",
-                  height: "30rem",
-                  borderRadius: "15px",
-                }}
+              className={style2.img1}
+               
                 alt="picture"
                 src={x.tweetPic
                 }
               /> 
-              : <></> }
+              : <>
+                <img 
+                className={style2.img1}
+                alt="picture"
+                src={x.tweetPic
+                }
+              /> 
+              </> }
                     </div>
                     <div className={style2.icons}>
                           <span>
@@ -80,5 +84,3 @@ function UserTweet() {
 }
 
 export default UserTweet
-
-

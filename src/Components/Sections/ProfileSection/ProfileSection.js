@@ -25,8 +25,8 @@ function ProfileSection() {
         <h2>{Data[getLocalStorageIndex].Name}</h2>
       </div>
         <img className={style.container} alt="Myimg.jpeg" src="https://i.pinimg.com/originals/95/e0/0a/95e00a18b1a7c7a5f9868e71b020c3c2.gif" />
-      <div>
-        <span className={style.Avatarsection}>
+      <div className={style.Avatarsection}>
+        <span >
           <img
             className={style.img}
             alt="Myimg.jpg"

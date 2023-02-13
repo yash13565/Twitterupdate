@@ -1,12 +1,33 @@
 .feed__header {
- 
+  
   top: 0;
-  /* background-color: #000; */
   backdrop-filter: blur(5px);
-  z-index: 10;
-  border-bottom: 1px rgb(60, 60, 60) solid;
-
+  z-index: 1
+  positio0;
+  /* border-bottom: 1px rgb(60, 60, 60) solid; */
   padding: 0.93rem 1.25rem;
+}
+.Profile{
+  color:blue;
+  background-color: black;
+}
+.drawer{
+  color: white;
+  font-weight: bold;
+  display: flex;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+
+}
+.NAME{
+  margin-left: 2rem;
+}
+.drawer::title{
+  background-color: black;
+}
+.menuDot{
+  margin-top: 0.2rem;
 }
 
 .feed__header h2 {
@@ -21,4 +42,39 @@
   color: white;
   margin-top: 2rem;
   z-index: 5;
+ border-collapse: 2px solid rgb(60,60,60);
+}
+
+.mobicon{
+  display: none;
+}
+.logo{
+  display: none;
+}
+
+@media only screen and (max-width:500px){
+  .feed__header{
+      width:100%;
+      }
+      .feed__header h2{
+        display: none;
+      }
+      .mobicon{
+        display: unset;
+        display: flex;
+        align-items: center;
+
+      }
+      .logo{
+        
+    
+        display: flex;
+        font-size: 30px;
+        justify-items: center;
+       width: 75%;
+      }
+      .feed__header_content{
+        display: flex;
+       
+      }
 }

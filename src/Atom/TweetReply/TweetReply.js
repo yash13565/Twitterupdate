@@ -12,7 +12,7 @@ import { useRecoilState } from "recoil";
 import { isTweetPost, Personaltweet,forPassingId } from "../../Recoil/Atom1/Atom";
 // import { Avatar } from "antd";
 
-function TweetReply() {
+function TweetReply(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
   const [post,setPost]=useState(tweetPosts)
@@ -54,28 +54,22 @@ function TweetReply() {
     let newObj1={
       tweetComment:storeArray
     }
-    //post[index].tweetComment=([...post[index].tweetComment,newObj1])
-    // console.log(storeArray)
-    //localStorage.setItem("const tweetPosts[2].tweetComment" , "ghyy")
+ 
    let k=JSON.parse(localStorage.getItem("constTweetPosts"))
    console.log(k)
    k[index].tweetComment=([...k[index].tweetComment,newObj1])
    localStorage.setItem("constTweetPosts", JSON.stringify(k))
 
   }
-  function handleClose() {
-    setIsOpen(false);
-  }
+
 
   return (
     <>
       <div className={style.parentContainer}>
         <div className={style.main}>
-          <CustomButton
-            buttonText="X"
-            customCss={style.btnClose}
-            btnNext={handleClose}
-          />
+          <button className={style.btnClose} onClick={props.onClick}>x</button>
+          
+         
         
           <div className={style.wrapper}>
             <textarea
@@ -94,6 +88,7 @@ function TweetReply() {
                 <img src={image} height="100%" width="100%" alt="foo" />
               </div>
             )}
+             <div className={style.iconscontainer1}>
             <div className={style.iconscontainer}>
               {Icons.map((menu) => {
                 return (
@@ -107,15 +102,16 @@ function TweetReply() {
                   </div>
                 );
               })}
-              <CustomButton
-                buttonText="Reply000"
+              
+            </div>
+            <CustomButton
+                buttonText="Reply "
                 btnNext={handleNewTweet}
                 customCss={style.button}
               />
-            </div>
           </div>
         </div>
-     
+        </div>  
         <input
           type="file"
           hidden

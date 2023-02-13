@@ -9,7 +9,7 @@ import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import style2 from "./Tweetpost.module.css";
-import { tweetPosts } from "../../../ConstData/ConstData";
+// import { tweetPosts } from "../../../ConstData/ConstData";
 import { useState } from "react";
 // import TweetReply from '../../../Atom/TweetReply/TweetReply';
 // import CustomButton from '../../../Atom/Button/CustomButton';
@@ -34,17 +34,16 @@ function Tweetpost() {
             <span className={style2.text}>
               <h3>
                 {tweetPostData.name}
-                <VerifiedIcon style={{ color: "blue" }} />
+                <VerifiedIcon style={{ color: "#1D9BF0" , width:"1rem" }} />
               </h3>
             </span>
             <p>{tweetPostData.tweetText}</p>
           </div>
         </div>
-
         <div className={style2.img}>
           <img
-            style={{ width: "30rem", height: "30rem", borderRadius: "15px" }}
-            alt="Urlist.jpg"
+           className={style2.img1}
+            alt="picture"
             src={tweetPostData.tweetPic}
           />
         </div>
@@ -65,11 +64,9 @@ function Tweetpost() {
             {tweetPostData.viewsCount}
             <PollIcon />
           </span>
-
           <UploadIcon />
         </div>
       </div>
-     
       {post[index].tweetComment.length > 0 ? (
         <>
           {post[index].tweetComment.map((data) => (
@@ -78,7 +75,7 @@ function Tweetpost() {
                 <div>
                   <Avatar
                     className={style2.avatar}
-                    src="https://i.pinimg.com/originals/95/e0/0a/95e00a18b1a7c7a5f9868e71b020c3c2.gif"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Steve_Jobs_Headshot_2010-CROP2.jpg/800px-Steve_Jobs_Headshot_2010-CROP2.jpg"
                   />
                 </div>
 
@@ -87,7 +84,7 @@ function Tweetpost() {
                     <span className={style2.text}>
                       <h3>
                         {Data[getLocalStorageIndex].Name}
-                        <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1.5rem" }} />
+                        <VerifiedIcon style={{ color: "#1D9BF0", fontSize: "1rem" }} />
                       </h3>
                     </span>
                     <p>{data.tweetComment}</p>
@@ -95,19 +92,19 @@ function Tweetpost() {
                 </div>
               </div>
               <div className={style2.icons}>
-                <span>
+                <span className={style2.icons}>
                   {tweetPostData.tweetCount}
                   <ChatBubbleOutlineIcon />
                 </span>
-                <span>
+                <span className={style2.icons}>
                   {tweetPostData.retweetCount}
                   <SyncIcon />
                 </span>
-                <span>
+                <span className={style2.icons}>
                   {tweetPostData.likesCount}
                   <FavoriteBorderIcon />
                 </span>
-                <span>
+                <span className={style2.icons}>
                   {tweetPostData.viewsCount}
                   <PollIcon />
                 </span>
@@ -124,15 +121,15 @@ function Tweetpost() {
           <div>
             <Avatar
               className={style2.avatar}
-              src="https://i.pinimg.com/originals/95/e0/0a/95e00a18b1a7c7a5f9868e71b020c3c2.gif"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Elon_Musk_2015.jpg/408px-Elon_Musk_2015.jpg"
             />
           </div>
 
           <div className={style2.innercontainer}>
             <span className={style2.text}>
               <h3>
-                Elon Musk
-                <VerifiedIcon style={{ color: "blue" }} />
+               Elon Musk
+                <VerifiedIcon style={{ color: "#1D9BF0" , width:"1rem" }} />
               </h3>
             </span>
             <p>{tweetPostData.tweetText}</p>

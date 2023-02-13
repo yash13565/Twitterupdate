@@ -6,9 +6,9 @@ import {
   isValidMobile,
   isValidString,
   isValidPassword,
- 
-
 } from "../../helper";
+
+import { FcGoogle } from "react-icons/fc";
 import styleDob from "../../Components/Dob/Dob.module.css";
 import Input from "../../Atom/Input/Input";
 import { Link } from "react-router-dom";
@@ -190,12 +190,12 @@ function Register() {
       <div className={style.container1}>
         <div className={style.mainContainer}>
           {form ? (
-            <>
+            <div >
               <div className={style.form}>
-                <div>
-                  <h1>Create your account</h1>
+                <div className={style.text2} >
+                  <h1 className={style.heading}>Create your account</h1>
                 </div>
-                <div>
+                
                   <Input
                     className={style.input1}
                     placeholder="Name"
@@ -203,7 +203,7 @@ function Register() {
                   />
 
                   <span style={{ color: "red" }}>{nameError}</span>
-                  <div className={style.toogleData}>
+                <div className={style.toogleData}>
                     {toggle ? (
                       <>
                         <Input
@@ -217,7 +217,7 @@ function Register() {
                       <>
                         <Input
                           className={style.input2}
-                          placeholder="email"
+                          placeholder="Email"
                           handleOnchange={handleEmail}
                         />
                         <span style={{ color: "red" }}>{emailError}</span>
@@ -239,10 +239,10 @@ function Register() {
                       />
                       <span style={{ color: "red" }}>{passwordError}</span>
                     </div>
-                    <div>
-                      <div>
+                    <div >
+                      <div className={style.para1}>
                         <h4 style={{ color: "white" }}>Date of birth</h4>
-                        <p style={{ color: "grey", width: "27rem" }}>
+                        <p style={{ color: "grey" }} >
                           This will not be shown publicly. Confirm your own age,
                           even if this account is for a business, a pet, or
                           something else.
@@ -250,13 +250,13 @@ function Register() {
                       </div>
                     </div>
                   </div>
-                  <div className={styleDob.container}>
+                  <div className={style.containerDob}>
                     <Month handleOnchange={handleMonth} />
                     <Date handleOnchange={handleDate} />
                     <Dayy handleOnchange={handleDay} />
                   </div>
                   <span style={{ color: "red" }}>{dobError}</span>
-                </div>
+                
                 <div>
                   <CustomButton
                     buttonText="next"
@@ -265,46 +265,48 @@ function Register() {
                   ></CustomButton>
                 </div>
               </div>
-            </>
+              </div>
           ) : (
             <>
               <p className={style.logo}>
-                <i class="fa fa-brands fa-twitter"></i>
+                <i className="fa fa-brands fa-twitter"></i>
               </p>
-              <h1>Join Twitter today</h1>
+              <h1 className={style.joinTwitter}>Join Twitter today</h1>
               <div>
                 <CustomButton
-                  icon={<i class="fa fa-brands fa-google"></i>}
-                  buttonText="Sign in with google"
+                  icon={<FcGoogle />}
+                  buttonText="Sign up with google"
                   customCss={style.CustomButton1}
                 ></CustomButton>
               </div>
               <br />
               <div>
                 <CustomButton
-                  icon={<i class="fa fa-brands fa-apple"></i>}
-                  buttonText="Sign in with Apple"
+                  icon={<i className="fa fa-brands fa-apple"></i>}
+                  buttonText="Sign up with Apple"
                   customCss={style.CustomButton2}
                 />
               </div>
-              <div className={style.or}>
-                <p className={style.line}>____</p>
-                OR
-                <p className={style.line}>____</p>
-              </div>
+              <div className={style.ortext}>
+              <hr style={{width:"8.4rem" , height:"0.05rem", marginTop:"0.2rem",backgroundColor:"#808080",border:"none"  }}/>
+             or
+             <hr style={{width:"8.4rem" , height:"0.05rem", marginTop:"0.2rem",backgroundColor:"#808080",border:"none"  }}/>
+            </div>
               <div className={style.signupbtn}>
                 <CustomButton
                   btnNext={Form}
-                  buttonText="sign up with phone number or email"
-                  customCss={style.CustomButton2}
+                  buttonText="Create account"
+                  customCss={style.CustomButton3}
                 />
-                <p>
-                  By signing up, you agree to the Terms of Service <br />
-                  and Privacy Policy, including Cookie Use.
-                </p>
+               <div className={style.para}>
+              
+              By signing up, you agree to the <span  style={{color:"#00acee"}}>Terms of Service </span>
+              and<span  style={{color:"#00acee"}}> Privacy Policy</span>, including<span  style={{color:"#00acee"}}> Cookie Use</span>.
+      
+            </div>
               </div>
               <div className={style.txt2}>
-                Have an Account Already..? <Link to="/"> Log in</Link>
+               Have an account already..?<Link to="/"><p> Log in</p> </Link>
               </div>
             </>
           )}

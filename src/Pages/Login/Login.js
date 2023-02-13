@@ -3,15 +3,14 @@ import style from "./Login.module.css";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { FaTwitter } from "react-icons/fa";
 import Input from "../../Atom/Input/Input";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { isLoginAtom,forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
-
+import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { isValidLogin } from "../../helper";
 function Login() {
-  const [nextbtn, setNextBtn] = useState(false);
- 
+  const [nextbtn, setNextBtn] = useState(false);  
   const nevigate = useNavigate();
   const [loginv, setLoginV] = useState("");
   const [passWordValue, setPasswordValue] = useState("");
@@ -28,15 +27,15 @@ function Login() {
   const buttonNext = () => {
     let flag = 1;
     if (isValidLogin(loginv)) {
-      setLoginError("Give Username or Email or Phoneno");
+      setLoginError("Give Username or Email or Phonenumber");
 
       flag = 1;
     } else {
       flag = 0;
-    }
+    } 
 
     let flagForLs = 0;
-    //for (var i = 0; i < localStorage.length; i++) {
+   
       if(localStorage.length==0)
       {
         alert("LocalStorage is empty")
@@ -48,7 +47,7 @@ function Login() {
         console.log(element.Email)
         if (element.Email === loginv || element.Name === loginv || element.Phone == loginv) {
           flagForLs = 1;
-          //const store=i;
+        
           console.log(element.Email)
           setLocalstorageKey(i);
           setLocalstorageIndex(i)
@@ -58,10 +57,7 @@ function Login() {
       })
       
       }
-    //}
-    //console.log(flagForLs)
-      
-    //}
+    
     if (flagForLs == 1 && flag == 0) {
       setNextBtn(true);
     } else if (flagForLs == 0) {
@@ -128,23 +124,22 @@ function Login() {
               <CustomButton
                 buttonText="Sign in with Google"
                 customCss={style.btn1}
-                icon={<i className="fa fa-brands fa-google"></i>}
+                icon={<FcGoogle />}
               ></CustomButton>
               <br />
               <CustomButton
+           
                 buttonText="Sign in with Apple"
                 icon={<i className="fa fa-brands fa-apple"></i>}
-                customCss={style.btn1}
+                customCss={style.btn2}
               ></CustomButton>
-              <br />
-              <div className={style.or}>
-                <span style={{ display: "flex" }}>
-                  <hr style={{ width: "8.4rem", height: "0px" }} />
-                  &nbsp;&nbsp;or&nbsp;&nbsp;
-                  <hr style={{ width: "8.4rem", height: "0px" }} />
-                </span>
-              </div>
-              <br />
+            
+            <div className={style.ortext}>
+             <hr style={{width:"8.4rem" , height:"0.01rem", marginTop:"0.2rem",backgroundColor:"#808080",border:"none"  }}/>
+             or
+             <hr style={{width:"8.4rem" , height:"0.01rem", marginTop:"0.2rem",backgroundColor:"#808080",border:"none"  }}/>
+            </div>
+              
               <div>
                 <Input
                   className={style.input}
@@ -171,7 +166,7 @@ function Login() {
           <div className={style.para}>
             <p>
               Don't have an account?{" "}
-              <Link to="/Register">
+              <Link className={style.link} to="/Register">
                 <span>Sign up</span>
               </Link>
             </p>

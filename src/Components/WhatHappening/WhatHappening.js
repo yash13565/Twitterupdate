@@ -105,6 +105,7 @@ function WhatHappening() {
                 />
                 </div>
             }
+            <div className={style.iconscontainer1}>
             <div className={style.iconscontainer}>
               {Icons.map((menu) => {
                 return (
@@ -116,13 +117,14 @@ function WhatHappening() {
                     <div>{menu.icon}</div>
                   </div>
                 );
-              })}
+              })} </div>
                  <CustomButton
           disable={disabled}
             buttonText="Tweet"
             btnNext={handleNewTweet}
             customCss={style.button}
           />
+           
             </div>
           </div>
         

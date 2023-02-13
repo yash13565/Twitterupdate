@@ -1,13 +1,13 @@
 export const tweetPosts = [
   {
     id: 0,
-    name: "Johnny Bhai",
-    handlerName: "@Johhnythedoctor",
+    name: "Doctor Strange",
+    handlerName: "@drstrange",
     organization: "The university of America",
     tweetText:
-      "I am everything the dr,the engineer etc. ",
+      "I am the Marvelous . ",
     tweetPic:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtn1XJW_4WuBIWqq10Td8XQ6VUDTnrsFNinQ&usqp=CAU",
+      "https://i.insider.com/6262ff239f65660019064d73?width=1000&format=jpeg&auto=webp",
     tweetCount: 100,
     retweetCount: 100,
     likesCount: 100,
@@ -24,7 +24,7 @@ export const tweetPosts = [
         tweetText:
           "I am everything the dr,the engineer etc. ",
         tweetPic:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtn1XJW_4WuBIWqq10Td8XQ6VUDTnrsFNinQ&usqp=CAU",
+          "https://giffiles.alphacoders.com/214/214285.gif",
         tweetCount: 100,
         retweetCount: 100,
         likesCount: 100,
@@ -70,9 +70,9 @@ export const tweetPosts = [
       },
       {
         tweetText:
-          "God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. It began in 2005 on the PlayStation 2 video game console and has become a flagship series for PlayStation, consisting of nine installments across multiple platforms. ",
+          "Human world ",
         tweetPic:
-          "https://media4.giphy.com/media/67ThVTcBxs0DQkDgTZ/giphy-downsized-large.gif?cid=6c09b9525aa262847ce6b98b1da046fc39f4ed0e28075a62&rid=giphy-downsized-large.gif&ct=g",
+          "https://media.tenor.com/04qbpHO1mJkAAAAC/dr-strange-doctor-strange.gif",
         tweetCount: 100,
         retweetCount: 100,
         likesCount: 100,
