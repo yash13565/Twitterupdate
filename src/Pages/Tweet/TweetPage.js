@@ -3,7 +3,7 @@ import MenuItems from "../../Components/Sections/Left/MenuItems"
 import RightSide from '../../Components/Sections/Right/RightSide'
 import Tweetpost from '../../Components/Sections/ProfileSection/Tweetpost'
 import style from "./Tweetpage.module.css"
-function Tweetpage() {
+export function Tweetpage() {
   return (
     <div>
           <div className={style.Main}>
@@ -20,5 +20,3 @@ function Tweetpage() {
     </div>
   )
 }
-
-export default Tweetpage
