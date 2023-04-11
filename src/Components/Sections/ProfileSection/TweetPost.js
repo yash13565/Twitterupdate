@@ -13,7 +13,7 @@ import style2 from "./Tweetpost.module.css";
 import { useState } from "react";
 // import TweetReply from '../../../Atom/TweetReply/TweetReply';
 // import CustomButton from '../../../Atom/Button/CustomButton';
-function Tweetpost() {
+function TweetPost() {
   const [post, setPost] = useState(JSON.parse(localStorage.getItem("constTweetPosts")));
   const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   let Data = JSON.parse(localStorage.getItem("user"));
@@ -162,4 +162,4 @@ function Tweetpost() {
   );
 }
 
-export default Tweetpost;
+export default TweetPost;

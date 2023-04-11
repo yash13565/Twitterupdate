@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuItems from '../../Components/Sections/Left/MenuItems'
 import style from './Tweetpage.module.css'
-import Tweetpost from '../../Components/Sections/ProfileSection/Tweetpost'
+import TweetPost from '../../Components/Sections/ProfileSection/TweetPost'
 import RightSide from '../../Components/Sections/Right/RightSide'
 function TweetPage() {
   return (
@@ -11,7 +11,7 @@ function TweetPage() {
         <MenuItems />
       </div>
       <div className={style.middleContainer}>
-     <Tweetpost /> 
+     <TweetPost /> 
       </div>
       <div className={style.rightContainer}>
         <RightSide />
