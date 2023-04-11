@@ -12,7 +12,7 @@ const Dialog2 = (props) => {
     <div className={style.textColor}>
       <Popover
         placement="bottomLeft"
-        content={<a onClick={props.onClick}> {props.content}</a>}
+        content={<a href='#dummy' onClick={props.onClick}> {props.content}</a>}
         title={
           <div style={{ color: "#fff", display: "flex", alignItems: "center" }}>
             {props.title}

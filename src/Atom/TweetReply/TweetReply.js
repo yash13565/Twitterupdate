@@ -6,20 +6,19 @@ import { HiOutlineGif } from "react-icons/hi2";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
-import ConstData from "../../ConstData/ConstData";
-import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState } from "recoil";
-import { isTweetPost, Personaltweet,forPassingId } from "../../Recoil/Atom1/Atom";
+import { forPassingId } from "../../Recoil/Atom1/Atom";
 // import { Avatar } from "antd";
 
 function TweetReply(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
-  const [post,setPost]=useState(tweetPosts)
+ 
   // const [profileTweet, setProfileTweet] = useRecoilState(Personaltweet)
   // const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const[index,setIndex]=useRecoilState(forPassingId)
   // const [forTrue, setForTrue] = useState(0);
+  console.log(isOpen,setIndex)
   const [storeArray, setStoreArray] = useState("");
   // let Data = JSON.parse(localStorage.getItem("user0"));
   const inputRef = useRef(null);

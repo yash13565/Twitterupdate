@@ -5,16 +5,12 @@ import { FiCamera } from "react-icons/fi";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
-import ConstData from "../../ConstData/ConstData";
-import { tweetPosts } from "../../ConstData/ConstData";
 import { useRecoilState ,useRecoilValue} from "recoil";
 import { isTweetPost ,Personaltweet ,forLocalStorageIndex} from "../../Recoil/Atom1/Atom";
-import { Avatar } from "antd";
 
 function Tweet(props) {
   let Data = JSON.parse(localStorage.getItem("user"));
   const [personal, setPersonal ] = useRecoilState(Personaltweet);
-  const [isOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
   const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);

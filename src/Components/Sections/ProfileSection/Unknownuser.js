@@ -37,7 +37,7 @@ function forReply(takeData)
         <p onClick={()=> nevigate("/Home") }><WestIcon /></p>
         <h2>{unknownProfileData.name}</h2>
       </div>
-        <img className={style.container} src={unknownProfileData.tweetPic} />
+        <img className={style.container} src={unknownProfileData.tweetPic} alt="my.jpeg" />
       <div>
         <span className={style.Avatarsection}>
           <img

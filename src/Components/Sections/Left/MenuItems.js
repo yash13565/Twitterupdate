@@ -17,7 +17,6 @@ import { Avatar } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import {forLocalStorageIndex} from "../../../Recoil/Atom1/Atom"
 import { useRecoilValue } from "recoil";
-import Dialog2 from "../../Dialog2/Dialog2";
 // import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import Card from "../../../Atom/Card/card";
 import Fab from '@mui/material/Fab';
