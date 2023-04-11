@@ -1,6 +1,6 @@
 import React from 'react'
 import MenuItems from '../../Components/Sections/Left/MenuItems'
-import style from './TweetPage.module.css'
+import style from './Tweetpage.module.css'
 import Tweetpost from '../../Components/Sections/ProfileSection/Tweetpost'
 import RightSide from '../../Components/Sections/Right/RightSide'
 function TweetPage() {
