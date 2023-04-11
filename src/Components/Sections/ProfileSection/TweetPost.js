@@ -8,7 +8,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import style2 from "./Tweetpost.module.css";
+import style2 from "./TweetPost.module.css";
 // import { tweetPosts } from "../../../ConstData/ConstData";
 import { useState } from "react";
 // import TweetReply from '../../../Atom/TweetReply/TweetReply';
