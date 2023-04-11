@@ -57,6 +57,7 @@ const Trends = () => {
     });
     setTrendings(tempArr);
     setData(tempArr)
+    setIsNotIntrested('')
   };
 
 

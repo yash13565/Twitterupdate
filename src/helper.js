@@ -28,7 +28,7 @@ export function isValidPassword(value) {
   }
 }
 export function isValidLogin(value) {
-  if (value.length == 0) {
+  if (value.length === 0) {
     return true;
   }
 }

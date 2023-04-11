@@ -369,7 +369,7 @@ export const tweetPosts = [
     retweetCount: 327,
     likesCount: 90,
     tweetComment: "3",
-    tweetComment: [],
+    tweetComment1: [],
     inrDcr: false,
     color: "rgb(60,60,60)",
     viewsCount: "7k",

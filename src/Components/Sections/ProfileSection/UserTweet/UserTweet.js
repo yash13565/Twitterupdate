@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import style2 from "./UserTweet.module.css"
 import { Avatar } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
@@ -9,12 +9,12 @@ import UploadIcon from "@mui/icons-material/Upload";
 import VerifiedIcon from '@mui/icons-material/Verified';
 import {Personaltweet} from "../../../../Recoil/Atom1/Atom"
 import { useRecoilState } from 'recoil'
-import { SouthAmerica } from '@mui/icons-material';
+
 
 function UserTweet() {
     const [data,setData]= useRecoilState(Personaltweet)
     
-    console.log(data);
+    console.log(data,setData);
   return (
     <>
     {data.map((x)=>{
@@ -40,14 +40,14 @@ function UserTweet() {
               <img 
               className={style2.img1}
                
-                alt="picture"
+                alt="my.jpeg"
                 src={x.tweetPic
                 }
               /> 
               : <>
                 <img 
                 className={style2.img1}
-                alt="picture"
+                alt="my.jpeg"
                 src={x.tweetPic
                 }
               /> 

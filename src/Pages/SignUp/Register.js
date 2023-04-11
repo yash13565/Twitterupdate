@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "./Register.module.css";
 import CustomButton from "../../Atom/Button/CustomButton";
 import {
@@ -9,7 +9,6 @@ import {
 } from "../../helper";
 
 import { FcGoogle } from "react-icons/fc";
-import styleDob from "../../Components/Dob/Dob.module.css";
 import Input from "../../Atom/Input/Input";
 import { Link } from "react-router-dom";
 import { Month, Date, Dayy } from "../../Components/Dob/Dob";
@@ -27,9 +26,7 @@ function Register() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [data, setData] = useState([]);
-  const [incl, setIncl] = useState(0);
   const [month, setMonth] = useState("");
   const [day, setDay] = useState("");
   const [date, setDate] = useState("");
@@ -128,40 +125,40 @@ function Register() {
     } else {
       flag = 0;
     }
-    if (Data.Month == "" || Data.Date == "" || Data.Year == "") {
+    if (Data.Month === "" || Data.Date === "" || Data.Year === "") {
       flag = 0;
       setDobError("please fill correct DOB input");
     } else {
       setDobError("");
     }
 
-    if (flag == 1) {
+    if (flag === 1) {
       var flagForLs = 0;
      // for (var i = 0; i < localStorage.length; i++) 
 
-     if(localStorage.length!=0)
+     if(localStorage.length!==0)
      {
         let k = JSON.parse(localStorage.getItem("user" ));
-        k.map((element)=>{
+        k.forEach((element)=>{
         if (element.Email === email) {
           flagForLs = 1;
         }
       }) }}
       
-      if (flagForLs == 1) {
+      if (flagForLs === 1) {
         alert("USER Email is Already Exist");
       } else {
       }
     
 
-    if (flag == 1 && flagForLs == 0)
+    if (flag === 1 && flagForLs === 0)
      {
       data.push(Data)
       setData([...data])
 
-      if(localStorage.length==0)
+      if(localStorage.length===0)
       {
-        if(localStorage.key(1) != "constTweetData")
+        if(localStorage.key(1) !== "constTweetData")
         localStorage.setItem('constTweetPosts', JSON.stringify(tweetPosts ));
          localStorage.setItem('user', JSON.stringify(data ));
       }

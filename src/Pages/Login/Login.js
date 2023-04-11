@@ -36,16 +36,16 @@ function Login() {
 
     let flagForLs = 0;
    
-      if(localStorage.length==0)
+      if(localStorage.length===0)
       {
         alert("LocalStorage is empty")
       }
       else
       {
       let k = JSON.parse(localStorage.getItem("user"));
-      k.map((element,i)=>{
+      k.forEach((element,i)=>{
         console.log(element.Email)
-        if (element.Email === loginv || element.Name === loginv || element.Phone == loginv) {
+        if (element.Email === loginv || element.Name === loginv || element.Phone === loginv) {
           flagForLs = 1;
         
           console.log(element.Email)
@@ -58,9 +58,9 @@ function Login() {
       
       }
     
-    if (flagForLs == 1 && flag == 0) {
+    if (flagForLs === 1 && flag === 0) {
       setNextBtn(true);
-    } else if (flagForLs == 0) {
+    } else if (flagForLs === 0) {
       setNextBtn(false);
       setLoginError("User Not Found");
     }
@@ -78,7 +78,7 @@ function Login() {
       flagForLs = 1;
     }
   
-    if (flagForLs == 1) {
+    if (flagForLs === 1) {
       setLoginStatus(true);
       alert("succesfully login");
       
