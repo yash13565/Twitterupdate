@@ -188,41 +188,32 @@ padding-left:0.5rem ;
         margin: 0;
         padding: 0;
     }
-.container1{
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
-}
- .form{
-    width: 100%;
-    height:100%;
- }
- .toggle h6{
-    margin-left: 14rem;
- }
- .para1{
-    padding-left: 2rem;
-    text-align: left;
-    width: 21.125rem;
-       
- }
- .text2 h1{
-    padding-left: 2rem;
- }
-
-.input1, 
-.input2,
- .formbtn,  
-
-.containerDob{
-        width: 21.125rem;
-        text-align: center;
-        padding-left: 1rem;
-}
-.mainContainer h1{
-    text-align: center;
-}
-.toggle h6{
-    margin-left: 12rem;
-}
+    .container1{
+        width: 100vw;
+        height:100vh;
+        border-radius: 0;
+    }
+     .form{
+        width: 100%;
+        height:100%;
+     }
+     .toggle h6{
+        margin-left: 14rem;
+     }
+     .para1{
+        text-align: left;
+        width: 21.125rem;      
+     }
+    .input1, 
+    .input2,
+     .formbtn,  
+    .containerDob{
+            width: 21.125rem;
+    }
+    .mainContainer h1{
+        text-align: left;
+    }
+    .toggle h6{
+        margin-left: 12rem;
+    }
 }

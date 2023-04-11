@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 // import style from "../styled.module.css";
 function Input(props) {
- 
+  const [value, setValue] = useState("");
+
   return (
     <div>
       <input

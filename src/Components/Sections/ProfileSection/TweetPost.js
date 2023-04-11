@@ -17,7 +17,7 @@ function Tweetpost() {
   const [post, setPost] = useState(JSON.parse(localStorage.getItem("constTweetPosts")));
   const getLocalStorageIndex=useRecoilValue(forLocalStorageIndex)
   let Data = JSON.parse(localStorage.getItem("user"));
-  console.log(setPost)
+
   const tweetPostData = useRecoilValue(userTweet);
   const index = useRecoilValue(forPassingId);
   // console.log(post[index].tweetComment[0].tweetComment)
@@ -40,10 +40,11 @@ function Tweetpost() {
             <p>{tweetPostData.tweetText}</p>
           </div>
         </div>
+
         <div className={style2.img}>
           <img
            className={style2.img1}
-            alt="my.jpeg"
+            alt="picture"
             src={tweetPostData.tweetPic}
           />
         </div>
@@ -64,9 +65,11 @@ function Tweetpost() {
             {tweetPostData.viewsCount}
             <PollIcon />
           </span>
+
           <UploadIcon />
         </div>
       </div>
+     
       {post[index].tweetComment.length > 0 ? (
         <>
           {post[index].tweetComment.map((data) => (

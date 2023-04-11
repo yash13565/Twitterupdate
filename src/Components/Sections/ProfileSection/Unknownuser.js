@@ -1,11 +1,11 @@
-import React from "react";
+import React,{useState,useEffect } from "react";
 
 import style from "./ProfileSection.module.css";
 // import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import WestIcon from "@mui/icons-material/West";
 import CustomButton from "../../../Atom/Button/CustomButton";
-import { useNavigate } from "react-router-dom";
-import {userProfile,userTweet} from "../../../Recoil/Atom1/Atom";
+import { useNavigate , useParams} from "react-router-dom";
+import {userProfile,userTweet,userTweetProfile} from "../../../Recoil/Atom1/Atom";
 import { useRecoilValue ,useSetRecoilState} from "recoil";
 import { Avatar } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
@@ -18,13 +18,24 @@ import style2 from "./Unknownuser.module.css"
 
 
 function ProfileSection() {
-  
+  const uid = useParams()
    const nevigate = useNavigate();
    const unknownProfileData=useRecoilValue(userProfile)
    const replyTweetPost=useSetRecoilState(userTweet)
-  //  const replyProfileDetails=useSetRecoilState(userTweetProfile)
+   const replyProfileDetails=useSetRecoilState(userTweetProfile)
    const tweets = unknownProfileData.tweets
-   
+   const [likesCount, setLikesCount] = useState(1000);
+   const [icon, setIcon] = useState("blue");
+ 
+   function handleLike() {
+    likesCount===1000 ? setLikesCount(1001): setLikesCount(1000)
+   if(likesCount===1000){
+     setIcon("red")
+   }else{
+     setIcon("blue")
+   }}
+
+
 function forReply(takeData)
 {
   replyTweetPost(takeData)
@@ -37,12 +48,12 @@ function forReply(takeData)
         <p onClick={()=> nevigate("/Home") }><WestIcon /></p>
         <h2>{unknownProfileData.name}</h2>
       </div>
-        <img className={style.container} src={unknownProfileData.tweetPic} alt="my.jpeg" />
+        <img className={style.container} src={unknownProfileData.tweetPic} />
       <div>
         <span className={style.Avatarsection}>
           <img
             className={style.img}
-            src = {unknownProfileData.tweetPic} alt="my.jpeg"/>
+            src = {unknownProfileData.tweetPic}/>
         
          
           <CustomButton customCss={style.btn} buttonText={"Edit profile"} />
@@ -101,7 +112,7 @@ TweetReplies:{
             <div className={style2.img}>
               <img
               className={style2.img1}
-                alt="my.jpeg"
+                alt="picture"
                 src={x.tweetPic}
               />
             </div>

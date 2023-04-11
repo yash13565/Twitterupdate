@@ -5,8 +5,12 @@ import { FiCamera } from "react-icons/fi";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
-import { useRecoilState,useRecoilValue } from "recoil";
-import { isTweetPost,Personaltweet,forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
+import { tweetPosts } from "../../ConstData/ConstData";
+import { useEffect } from "react";
+import { useRecoilState,useRecoilValue, useSetRecoilState } from "recoil";
+
+import { isTweetPost,Personaltweet,forLocalStorageIndex,countForTweet } from "../../Recoil/Atom1/Atom";
+import { json } from "react-router-dom";
 
 function WhatHappening() {
   let Data = JSON.parse(localStorage.getItem("user"));

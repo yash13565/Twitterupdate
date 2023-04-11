@@ -1,3 +1,4 @@
+
 import style from "./Dialog.module.css";
 import React from "react";
 import Fab from '@mui/material/Fab';
@@ -12,18 +13,18 @@ function DialogBox(props) {
   const handleClickOpen = () => {
     SetisOpen(true);
   };
- 
+
   const handleClose = () => {
     SetisOpen(false);
   };
   return (
     <div className={style.textColor}>
-     
+    
           <span className={style.floatIcon}>  <Fab onClick={handleClickOpen} color="primary" aria-label="add">
                   <AddIcon />
-                   </Fab></span>
-                   <Dialog
-                   className={style.dialog1}
+                  </Fab></span>
+                  <Dialog
+                  className={style.dialog1}
                 open={!!isOpen}
                 onClose={handleClose}
                 variant="outlined"
@@ -35,7 +36,7 @@ function DialogBox(props) {
               >
                 <Tweet onClick={handleClose}/>
               </Dialog>
-     
+    
     </div>
   );
 }

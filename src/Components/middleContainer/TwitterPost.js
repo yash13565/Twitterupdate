@@ -15,9 +15,11 @@ import Dialog from "@mui/material/Dialog";
 import {
   isTweetPost,
   userProfile,
+  requestedProfileAtom,
   forPassingId
 } from "../../Recoil/Atom1/Atom";
 import {  useNavigate } from "react-router-dom";
+import { tweetPosts } from "../../ConstData/ConstData";
 import TweetReply from "../../Atom/TweetReply/TweetReply";
 
 export default function TwitterPost() {
@@ -32,7 +34,6 @@ export default function TwitterPost() {
   const [isOpen, setIsOpen] = useState(false);
   const[count,setCount]=useState(0)
   
-console.log(newProfile,isOpen,setNewPost);
 
   function handleClosebtn() {
     alert("hiii")
@@ -141,7 +142,7 @@ function handleClickOpen (index) {
               {data.tweetPic ? 
               <img
               className={style.img1}
-                alt="my.jpeg"
+                alt="picture"
                 src={data.tweetPic}
               /> : <></> }
             </div>

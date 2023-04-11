@@ -16,7 +16,6 @@
 }
 .Dialog{
   backdrop-filter: blur(5px);
-  background-color: blue;
 }
 .icons{
   display: flex;

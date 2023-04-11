@@ -4,7 +4,7 @@ import MenuItems from "../../Components/Sections/Left/MenuItems"
 import RightSide from '../../Components/Sections/Right/RightSide'
 import Tweetpost from '../../Components/Sections/ProfileSection/Tweetpost'
 import style from "./Tweetpage.module.css"
-export default function Tweetpage() {
+function Tweetpage() {
 
 
   return (
@@ -24,3 +24,4 @@ export default function Tweetpage() {
   )
 }
 
+export default Tweetpage

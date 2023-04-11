@@ -9,7 +9,7 @@
       z-index: 10;
       display: flex;
       gap: 1.5rem;
-      border-bottom: 1px #6A6F74 solid;
+      border-bottom: 1px rgb(60, 60, 60) solid;
   
       padding: 0.93rem 1.25rem;
       position: sticky;
@@ -42,17 +42,17 @@
      margin-left: 2rem;
   }
   .btn{
-   
-    border-radius: 25px;
-    margin-left: 0.5rem;
-    margin-top: 1rem;
+      width: 7.225rem;
+      height: 2.25rem;
+      border-radius: 25px;
+      margin-left: 2.5rem;
+      margin-top: 1rem;
     font-size: 1rem;
     border: 1rem ;
     background:none;
     color: white;
-    border: 1px #6A6F74 solid;
+    border: 1px white solid;
     font-weight: bold;
-    padding: 0.5rem 0.8rem;
     
   
   }
@@ -67,8 +67,15 @@
   .followerscont{
     margin-top: 1.2rem;
   }
-  @media only screen and (max-width:786px) {
+
+  @media only screen and (max-width: 768px){
+    /* .Avatarsection{
+      display: flex;
+      gap: 2rem;
+  } */
+   
     .btn{
-      display: none;
+display: none;
     }
+
   }

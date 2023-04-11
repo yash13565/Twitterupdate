@@ -11,35 +11,35 @@ const Trends = () => {
       id: 1,
       isNotIntrested: false,
       country: "Trending in India",
-      keyword: "#Sky",
-      totalKeywords: "800k Tweets",
+      keyword: "#Ms Dhoni",
+      totalKeywords: "8000k Tweets",
     },
     {
       id: 2,
       isNotIntrested: false,
       country: "Trending in India",
-      keyword: "#Akshay Kumar",
-      totalKeywords: "6003k Tweets",
+      keyword: "#Virat kohli",
+      totalKeywords: "6000k Tweets",
     },
     {
       id: 3,
       isNotIntrested: false,
-      country: "Trending in Football",
-      keyword: "#messi",
+      country: "Trending in Sports",
+      keyword: "#RohitSharma",
       totalKeywords: "2560k Tweets",
     },
     {
       id: 4,
       isNotIntrested: true,
-      country: "Trending in Indian Football",
-      keyword: "#SunilChehtri",
-      totalKeywords: "2030k Tweets",
+      country: "Trending in Sports",
+      keyword: "#ViratKohli",
+      totalKeywords: "2000k Tweets",
     },
     {
       id: 5,
       isNotIntrested: false,
-      country: "Trending in Songs",
-      keyword: "#Arijit",
+      country: "Trending in Sports",
+      keyword: "#sachin",
       totalKeywords: "2000k Tweets",
     },
   ]);
@@ -57,7 +57,6 @@ const Trends = () => {
     });
     setTrendings(tempArr);
     setData(tempArr)
-    setIsNotIntrested('')
   };
 
 

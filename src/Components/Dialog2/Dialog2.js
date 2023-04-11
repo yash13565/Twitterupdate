@@ -12,7 +12,7 @@ const Dialog2 = (props) => {
     <div className={style.textColor}>
       <Popover
         placement="bottomLeft"
-        content={<a href='#dummy' onClick={props.onClick}> {props.content}</a>}
+        content={<a onClick={props.onClick}> {props.content}</a>}
         title={
           <div style={{ color: "#fff", display: "flex", alignItems: "center" }}>
             {props.title}
@@ -24,7 +24,7 @@ const Dialog2 = (props) => {
           color: "#fff",
           background: "black",
           border: "1px solid #fff",
-          boxShadow: "0 0 10px #fff",
+          // boxShadow: "0 0 10px #fff",
         }}
         onOpenChange={handleOpenChange}
       >

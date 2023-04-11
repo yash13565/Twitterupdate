@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import style from "./Navbar.module.css";
 import { FaHashtag, FaHouseUser, FaTwitter } from "react-icons/fa";
 import { Avatar } from "@mui/material";
-import { Drawer, Space } from "antd";
+import { Button, Drawer, Space } from "antd";
 import { VscBellDot } from "react-icons/vsc";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsBookmark, BsPerson } from "react-icons/bs";
@@ -11,12 +11,12 @@ import { CgMoreO } from "react-icons/cg";
 import { forLocalStorageIndex } from "../../Recoil/Atom1/Atom";
 import { useRecoilValue } from "recoil";
 import { useNavigate } from "react-router-dom";
+import Icon from '@ant-design/icons';
 import { CloseOutlined } from '@ant-design/icons';
 
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState("left");
-  console.log(setPlacement)
   const showDrawer = () => {
     setOpen(true);
   };

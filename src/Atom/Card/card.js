@@ -1,19 +1,24 @@
 import React, { useState } from 'react'
 import style from "./card.module.css"
 import { useSetRecoilState } from "recoil";
+import { isLoginAtom } from "../../Recoil/Atom1/Atom";
+import DialogBox from '../../Components/Dialog/DialogBox';
 import { Button, Popover } from "antd";
-import { isLoginAtom } from '../../Recoil/Atom1/Atom';
 function Card(props) {
   const setLoginStatus = useSetRecoilState(isLoginAtom);
-  
+  // const [open, setOpen] = useState(false);
+
+  // const HandleClick = () => {
+  //   setOpen(false);
+  // };
   const [open, setOpen] = useState(false);
-  console.log(open)
+
   const handleOpenChange = (newOpen) => {
     setOpen(newOpen);
   };
   function HandaleLogOut() {
     let text = 'Do You Logout ! \nEither Ok or Cancel';
-      if(window.confirm (text) === true){
+      if(window.confirm (text) == true){
           setLoginStatus(false);
     alert("successfully Logout");
       } else {
@@ -22,10 +27,23 @@ function Card(props) {
   }
   return (
 <div className={style.textColor}>
-   
+    {/* <DialogBox 
+                  // onClick={HandleClick}
+                  title={
+                    <div>
+                  This trend is harmful or
+                      spammy
+                    </div>
+                  }
+                  content={
+                    <p onClick={HandaleLogOut}>
+                      Logout
+                    </p>
+                  }
+                /> */}
           <Popover
     
-    content={<a href='#dummy' onClick={HandaleLogOut}>   Logout</a>}
+    content={<a onClick={HandaleLogOut}>   Logout</a>}
     title={
       <div style={{ color: "#fff", display: "flex", alignItems: "center" }}>
         This trend is harmful or
